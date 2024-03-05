@@ -1,5 +1,5 @@
-# projeto_dev_loja
-Projeto realizado em grupo para a materia de devWeb 2
+# project-loja-de-roupas
+Projeto realizado em grupo para a materia de desenvolvimento Web II, na faculdade de tecnologia Fatec.
 
 nome do projeto: [pendente]
 
