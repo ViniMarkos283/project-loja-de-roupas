@@ -17,4 +17,20 @@
     border: 0 none;
     border-radius: 18px;
     outline: none;
+    text-indent: 20px;
+}
+
+.head button{
+    background-color: transparent;
+    border: 0 none;
+    outline: none;
+}
+
+.menu{
+    display: none;
+}
+
+/* mobile settings */
+@media screen and (max-width: 767px) {
+    
 }
