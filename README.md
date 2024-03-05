@@ -11,5 +11,5 @@ integrantes:
 - Luciana Guedes de Araújo
 - Marcos Vinicius de Oliveira
 - Renato Winícius de Lima Jacob
-- Pedro
+- Pedro Henrique S. Bernardo
 
