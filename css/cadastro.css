@@ -1,0 +1,27 @@
+.spaceTop{
+    padding: 4%;
+}
+.spaceCadastro{
+    margin: 3%;
+}
+
+.backCadastro{
+    background-image: url("https://img.freepik.com/free-photo/rows-hangers-with-clothes_23-2147669916.jpg?t=st=1709650475~exp=1709654075~hmac=97f761ee5f27d407b183ebb92fa43f324c11e9df15ba641ea57ebf31ef49afab&w=996");
+    background-repeat: no-repeat;
+    background-size: 100% 100vh;
+    border-radius: 10px;
+}
+
+.formCadastro{
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 2%;
+}
+
+
+.btCadastro{
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    padding: 0%;
+}

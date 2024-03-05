@@ -1,0 +1,27 @@
+.spaceTop{
+    padding: 4%;
+}
+.spaceLogin{
+    margin: 3%;
+}
+
+.backLogin{
+    background-image: url("https://img.freepik.com/free-photo/side-view-woman-looking-clothes_23-2149536978.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100vh;
+    border-radius: 10px;
+}
+
+.formLogin{
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 2%;
+}
+
+
+.btLogin{
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    padding: 0%;
+}

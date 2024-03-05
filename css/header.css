@@ -1,0 +1,36 @@
+.head{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    background-color: lightsalmon;
+    padding: 15px;
+}
+
+.head .icon{
+    width: 40px;
+    height: 40px;
+    filter: invert(100);
+}
+
+.head input{
+    width: 50%;
+    border: 0 none;
+    border-radius: 18px;
+    outline: none;
+    text-indent: 20px;
+}
+
+.head button{
+    background-color: transparent;
+    border: 0 none;
+    outline: none;
+}
+
+.menu{
+    display: none;
+}
+
+/* mobile settings */
+@media screen and (max-width: 767px) {
+    
+}
