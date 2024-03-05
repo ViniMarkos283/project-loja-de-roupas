@@ -1,5 +1,7 @@
 # projeto_dev_loja
-Projeto realizado em trio para a materia de devWeb 2
+Projeto realizado em grupo para a materia de devWeb 2
+
+nome do projeto: [pendente]
 
 problema encontrado: [pendente]
 
@@ -9,4 +11,5 @@ integrantes:
 - Luciana Guedes de Araújo
 - Marcos Vinicius de Oliveira
 - Renato Winícius de Lima Jacob
+- Pedro
 
