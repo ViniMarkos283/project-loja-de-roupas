@@ -26,11 +26,12 @@ div{
     width: 100%;
     height: 100%;
     border-radius: 18px;
+    background-color: white;
 }
 
 .right{
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .data{
@@ -43,19 +44,21 @@ div{
 }
 
 .switch{
+    background-color: #FA7E70;
+    color: white;
     padding: 10px;
     border: 0 none;
     border-radius: 18px;
     font-weight: bold;
+    transition: 0.5s;
 }
 
 .switch:hover{
     background-color: white;
+    color: #FA7E70;
+    transition: 0.5s;
 }
 
-.size{
-    padding: 10px;
-}
 
 
 
