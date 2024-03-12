@@ -11,7 +11,7 @@
     <title>Troca</title>
 </head>
 
-<body>
+<body onload="loadOneProduct()">
 
     <header>
         <div class="head">
@@ -26,12 +26,13 @@
         <div class="center">
             <div class="ui">
                 <div class="left">
-                    <img src="" alt="Clothes image" class="img">
+                    <img id="image" src="" alt="Clothes image" class="img">
                 </div>
                 <div class="right">
-                    <input type="text" class="data" value="name" disabled>
-                    <input type="text" class="data" value="descrição" disabled>
-                    <input type="text" class="data" value="tamanho" disabled>
+                    <input type="text" id="name" class="data" value="name" disabled>
+                    <input type="text" id="desc" class="data" value="descrição" disabled>
+                    <input type="text" id="size" class="data" value="tamanho" disabled>
+                    <input type="text" id="categ" class="data" value="Categoria" disabled>
 
                     <input type="button" class="switch" value="Trocar com o anunciante">
                 </div>
@@ -40,6 +41,8 @@
 
     </section>
 
+    <script src="../js/troca.js"></script>
+    <script src="../js/produtos.js"></script>
 
 </body>
 
