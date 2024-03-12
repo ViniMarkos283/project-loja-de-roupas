@@ -22,17 +22,6 @@
         <div>
             <section>
                 <article>
-                    <!-- <div class="row">
-                        <div class="col">
- 
-                        </div>
-                        <div class="col center nome">
-                            <p>Bazar CATTLEYA</p>
-                        </div>
-                        <div class="col">
- 
-                        </div>
-                    </div> -->
                     <div class="row spaceTop">
  
                         <div class="col">
@@ -42,17 +31,17 @@
                             <form>
                                 <div class="mb-3">
                                     <label for="Email" class="form-label">Email</label>
-                                    <input type="email" class="form-control backInput" placeholder="example@gmail.com"
+                                    <input type="email" id="email" class="form-control backInput" placeholder="example@gmail.com"
                                         aria-describedby="emailHelp">
                                 </div>
                                 <div class="mb-3">
                                     <label for="Senha" class="form-label">Senha</label>
-                                    <input type="password" class="form-control backInput">
+                                    <input type="password" id="senha" class="form-control backInput">
                                 </div>
                                
                             </form>
                             <div class="btLogin">
-                                <button type="submit" class="btn bt">Enviar</button>
+                                <button type="submit" class="btn bt" onclick="login()">Enviar</button>
                                 <a href="../html/cadastro.html"><button type="submit" class="btn bt">Cadastro</button></a>
                             </div>
                         </div>
