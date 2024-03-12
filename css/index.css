@@ -2,9 +2,23 @@
     box-sizing: border-box;
 }
 
+.wrapper {
+  max-width: 60rem;
+  margin-inline: auto;
+}
+
+.image {
+  background-size: cover;
+  width: 50px;
+}
+
+.item {
+  border: 1px solid black;
+  border-radius: 6px;
+  margin: 10px;
+}
+
 .catalogue {
     margin: 10px;
     padding: 10px;
-    border: 1px solid black;
-    border-radius: 4px;
 }
