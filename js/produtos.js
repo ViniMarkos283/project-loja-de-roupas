@@ -14,10 +14,6 @@ function products() {
         { name: '', price: '', desc: '', type: '' },
         { name: '', price: '', desc: '', type: '' },
         { name: '', price: '', desc: '', type: '' },
-
-        { name: '', price: '', desc: '', type: '' },
-        { name: '', price: '', desc: '', type: '' },
-        { name: '', price: '', desc: '', type: '' },
     ]
 
     return itens
