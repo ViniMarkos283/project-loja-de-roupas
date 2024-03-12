@@ -3,17 +3,17 @@
 // caso chamado, retornará a lista
 function products() {
     const itens = [
-        { name: '', price: '', desc: '', type: '' },
-        { name: '', price: '', desc: '', type: '' },
-        { name: '', price: '', desc: '', type: '' },
+        { name: '', size: '', desc: '', type: '', img: '' },
+        { name: '', size: '', desc: '', type: '', img: '' },
+        { name: '', size: '', desc: '', type: '', img: '' },
 
-        { name: '', price: '', desc: '', type: '' },
-        { name: '', price: '', desc: '', type: '' },
-        { name: '', price: '', desc: '', type: '' },
+        { name: '', size: '', desc: '', type: '', img: '' },
+        { name: '', size: '', desc: '', type: '', img: '' },
+        { name: '', size: '', desc: '', type: '', img: '' },
 
-        { name: '', price: '', desc: '', type: '' },
-        { name: '', price: '', desc: '', type: '' },
-        { name: '', price: '', desc: '', type: '' },
+        { name: '', size: '', desc: '', type: '', img: '' },
+        { name: '', size: '', desc: '', type: '', img: '' },
+        { name: '', size: '', desc: '', type: '', img: '' },
     ]
 
     return itens
@@ -27,13 +27,13 @@ function loadProducts(){
 
     image = document.querySelectorAll('')
     description = document.querySelectorAll('')
-    price = document.querySelectorAll('')
+    size = document.querySelectorAll('')
     type = document.querySelectorAll('')
 
     for (let i = 0; i < itens.length; i++) {
         image[i].src = itens[i].img
         description[i].value = itens[i].desc
-        price[i].value = itens[i].price
+        size[i].value = itens[i].size
         type[i].value = itens[i].type
     }
 }

@@ -13,7 +13,7 @@ Bazar Cattleya, moda evangelica [provisório]
 [se houver mais, ou excesso de itens, fiquem a vontade para alterar e propor sugestoes]
 
 # Solução: 
-- elaborar um site/aplicativo para a troca, venda e aluguel de roupas focado para a comunidade religiosa em geral;
+- elaborar um site/aplicativo para a troca e doação de roupas focado para a comunidade religiosa em geral;
 
 # Ferramentas usadas durante o projeto:
 - Html;
@@ -32,5 +32,5 @@ Bazar Cattleya, moda evangelica [provisório]
 - index > onde começa, deve conter a lista de roupas como uma vitrine, para o user comprar, alugar ou doar
 - login > é por onde o user fará seu login para poder comprar, vender, alugar e doar roupas;
 - carrinho > guardará os itens escolhidos pelo user, permitindo serem comprados todos de uma vez, remover itens ou limpar o carrinho;
-- compra > página individual para compra, aluguel, doação de uma unica peça escolhida, igual no Mercado Livre, por exemplo;
+- troca > página individual para visualizar e solicitar a troca de uma unica peça escolhida, igual no Mercado Livre, por exemplo;
 - [vago para adição de novas págs, se necessário]

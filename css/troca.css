@@ -1,0 +1,62 @@
+div{
+    display: flex;
+}
+
+.center{
+    height: 85vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.ui{
+    background-color: lightsalmon;
+    border-radius: 38px;
+    width: 80%;
+    height: 90%;
+}
+
+.left, .right{
+    width: 50%;
+    height: 100%;
+    color: white;
+    padding: 20px;
+}
+
+.img{
+    width: 100%;
+    height: 100%;
+    border-radius: 18px;
+}
+
+.right{
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.data{
+    background-color: transparent;
+    border: 0 none;
+    outline: none;
+    font-size: x-large;
+    color: white;
+    text-align: center;
+}
+
+.switch{
+    padding: 10px;
+    border: 0 none;
+    border-radius: 18px;
+    font-weight: bold;
+}
+
+.switch:hover{
+    background-color: white;
+}
+
+.size{
+    padding: 10px;
+}
+
+
+
+
