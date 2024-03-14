@@ -22,6 +22,9 @@ Bazar Cattleya, moda evangelica [provisório]
 - Bootstrap;
 - [adicionar a medida q for usar]
 
+# Paleta de cores:
+- [a definir]
+
 # Integrantes do projeto: 
 - Luciana Guedes de Araújo;
 - Marcos Vinicius de Oliveira;
