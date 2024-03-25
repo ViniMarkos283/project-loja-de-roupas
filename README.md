@@ -2,7 +2,7 @@
 Projeto realizado em grupo para a materia de desenvolvimento Web II, na faculdade de tecnologia Fatec, para fins de agregar ao portfolio do grupo somado ao conteúdo aprendido durante o curso.
 
 # Nome do projeto: 
-Bazar Cattleya, moda evangelica [provisório]
+Bazar Cattleya, moda evangelica.
 
 # Problemas encontrados: 
 - dificuldade nas comunidades religiosas na aquisição de vestimentas; 
@@ -21,9 +21,6 @@ Bazar Cattleya, moda evangelica [provisório]
 - JavaScript;
 - Bootstrap;
 - [adicionar a medida q for usar]
-
-# Paleta de cores:
-- [a definir]
 
 # Integrantes do projeto: 
 - Luciana Guedes de Araújo;
