@@ -26,8 +26,11 @@ function atualizarCarrinho() {
         const itemElement = document.createElement('div');
         itemElement.innerHTML = 
         `
-        <img src="${item.img}" alt="${item.nome}">
-                    <p class="lines">${item.nome} - R$ ${item.preco.toFixed(2)} <button class="btnRemove" onclick="removerItem(${index})">Remover</button></p>
+        <div class="resultDiv row lines">
+       <div class="col">  <img class="imgIcon" src="${item.img}" alt="${item.nome}"></div>
+       <div class="col"> <p class="">${item.nome} - R$ ${item.preco.toFixed(2)} </p></div>
+       <div class="col"> <button class="btnRemove" onclick="removerItem(${index})">Remover</button></div>
+                    </div>
                 `;
         carrinhoElement.appendChild(itemElement);
 
@@ -40,6 +43,6 @@ function atualizarCarrinho() {
 }
 
 
-adicionarItem("..\img\banner\dress005.jpg",'Produto A', 10.50);
-adicionarItem("..\img\banner\dress005.jpg",'Produto B', 20.75);
-adicionarItem("..\img\banner\dress005.jpg",'Produto C', 15.00);
+adicionarItem("https://images.pexels.com/photos/291759/pexels-photo-291759.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",'Produto A', 10.50);
+adicionarItem("https://images.pexels.com/photos/291759/pexels-photo-291759.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",'Produto B', 20.75);
+adicionarItem("https://images.pexels.com/photos/291759/pexels-photo-291759.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",'Produto C', 15.00);
