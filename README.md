@@ -22,9 +22,11 @@ Front-End:
   - JavaScript;
   - Bootstrap;
   - [adicionar a medida q for usar]
+
 Database:
   - MySQL; (não implementado ainda)
   - [adicionar a medida q for usar]
+
 Back-End:
   - [adicionar a medida q for usar]
 
