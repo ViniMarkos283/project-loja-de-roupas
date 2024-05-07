@@ -42,7 +42,7 @@
                             </form>
                             <div class="btLogin">
                                 <button type="submit" class="btn bt" onclick="login()">Enviar</button>
-                                <a href="../html/cadastro.html"><button type="submit" class="btn bt">Cadastro</button></a>
+                                <button type="submit" class="btn bt" onclick="cadastro()">Cadastro</button>
                             </div>
                         </div>
                         <div class="col"></div>
@@ -56,5 +56,10 @@
         crossorigin="anonymous"></script>
     <script src="../js/login.js"></script>
 </body>
- 
+<script>
+    // Função para redirecionar para a página "cadastro.html"
+    function cadastro() {
+        window.location.assign("../html/cadastro.html");
+    }
+  </script>
 </html>

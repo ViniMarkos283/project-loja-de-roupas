@@ -129,12 +129,11 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="btcadastro center">
-                                <button type="submit" class="btn bt btn-primary" onclick="cadastrar()">Enviar</button>
-                                <a href="../html/login.html"><button type="submit"
-                                        class="btn bt btn-primary">Login</button></a>
-                            </div>
                         </form>
+                        <div class="btcadastro center">
+                            <button type="submit" class="btn bt btn-primary" onclick="cadastrar()">Enviar</button>
+                            <button type="submit" class="btn bt btn-primary" onclick="login()">Login</button>
+                        </div>
                     </div>
                     <div class="col-3"></div>
                 </div>
@@ -146,5 +145,11 @@
         crossorigin="anonymous"></script>
     <script src="../js/cadastro.js"></script>
 </body>
-
+<script>
+    // Função para redirecionar para a página "login.html"
+    function login() {
+        window.location.href = "../html/index.html";
+        console.log("teste");
+    }
+</script>
 </html>
