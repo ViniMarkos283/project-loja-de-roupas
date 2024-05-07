@@ -1,9 +1,13 @@
 *{
-    padding: 0;
-    margin: 0;
     font-family: 'Times New Roman', Times, serif;
     font-size: medium;
     font-weight: 100;
+}
+
+body{
+    width: 100%;
+    padding: 0;
+    margin: 0;
 }
 .infoCenter{
     background-color: #fdd7a9;
@@ -56,4 +60,9 @@
 
 .resultDiv{
     display: flex;
+}
+
+.itens{
+    font-size: larger;
+    font-weight: 300;
 }

@@ -28,7 +28,7 @@ function atualizarCarrinho() {
         `
         <div class="resultDiv row lines">
        <div class="col">  <img class="imgIcon" src="${item.img}" alt="${item.nome}"></div>
-       <div class="col"> <p class="">${item.nome} - R$ ${item.preco.toFixed(2)} </p></div>
+       <div class="col"> <p class="itens">${item.nome} - R$ ${item.preco.toFixed(2)} </p></div>
        <div class="col"> <button class="btnRemove" onclick="removerItem(${index})">Remover</button></div>
                     </div>
                 `;
