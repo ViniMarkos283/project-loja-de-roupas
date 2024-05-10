@@ -36,6 +36,15 @@ Back-End:
 - Pedro Henrique S. Bernardo;
 - Renato Winícius de Lima Jacob.
 
+# hospedagem: 
+- Github
+
+# paleta de cores:
+- #F9F5F6
+- #F8E8EE
+- #FDCEDF
+- #F2BED1
+
 # Breve explicação sobre as paginas e suas devidas funções:
 - index > onde começa, deve conter a lista de roupas como uma vitrine, para o user comprar, alugar ou doar, o ideal é q os produtos saissem direto do BD;
 - login > é por onde o user fará seu login para poder comprar, vender, alugar e doar roupas;
