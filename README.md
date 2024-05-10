@@ -2,7 +2,7 @@
   Projeto realizado em grupo para a materia de desenvolvimento Web II, na faculdade de tecnologia Fatec Luigi Papaiz, localizada no municipio de Diadema, para fins de agregar ao portfolio do grupo somado ao conteúdo aprendido durante o curso.
 
 # Nome do projeto: 
-Bazar Cattleya, moda evangelica. [ aberto para mudanças ]
+Bazar Cattleya, moda evangelica.
 
 # Problemas encontrados: 
 - dificuldade nas comunidades religiosas na aquisição de vestimentas; 
