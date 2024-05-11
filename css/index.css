@@ -1,3 +1,5 @@
+@import url('color_pallete.css');
+
 :root {
   font-family: system-ui;
   --accent-color: hsl(6, 93%, 71%);
@@ -10,7 +12,7 @@
 }
 
 .outer-wrapper {
-  background-color: var(--background-color);
+  background-color: var(--cor-1);
   color: var(--foreground-color);
 }
 

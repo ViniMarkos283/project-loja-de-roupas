@@ -1,8 +1,10 @@
+@import url('color_pallete.css');
+
 .head{
     display: flex;
     justify-content: space-around;
     width: 100%;
-    background-color: #ffa07a;
+    background-color: var(--cor-4);
     padding: 15px;
 }
 
