@@ -45,6 +45,10 @@ Back-End:
 - #FDCEDF
 - #F2BED1
 
+extras:
+- #AD88C6
+- #7469B6;
+
 # Breve explicação sobre as paginas e suas devidas funções:
 - index > onde começa, deve conter a lista de roupas como uma vitrine, para o user comprar, alugar ou doar, o ideal é q os produtos saissem direto do BD;
 - login > é por onde o user fará seu login para poder comprar, vender, alugar e doar roupas;
