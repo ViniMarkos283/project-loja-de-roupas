@@ -1,18 +1,20 @@
+@import url('color_pallete.css');
+
 div{
     display: flex;
 }
 
 .center{
-    height: 85vh;
+    height: 90vh;
     align-items: center;
     justify-content: center;
 }
 
 .ui{
-    background-color: lightsalmon;
+    background-color: var(--cor-4);
     border-radius: 38px;
     width: 80%;
-    height: 90%;
+    height: 80%;
 }
 
 .left, .right{
@@ -44,7 +46,7 @@ div{
 }
 
 .switch{
-    background-color: #FA7E70;
+    background-color: var(--cor-5);
     color: white;
     padding: 10px;
     border: 0 none;
@@ -55,8 +57,15 @@ div{
 
 .switch:hover{
     background-color: white;
-    color: #FA7E70;
+    color: var(--cor-5);
     transition: 0.5s;
+}
+
+/* mobile settings */
+@media screen and (max-width: 767px) {
+    .ui{
+        height: 75%;
+    }
 }
 
 

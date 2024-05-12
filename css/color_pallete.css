@@ -3,5 +3,9 @@
     --cor-2: #F8E8EE; /* Rosa claro */
     --cor-3: #FDCEDF; /* Rosa claro */
     --cor-4: #F2BED1; /* Rosa claro */
+    --cor-5: #AD88C6; /* roxo claro (extra) */
+    --cor-6: #7469B6; /* roxo escuro (extra) */
   }
+
+  /* coloquei umas extras, para dar contraste com as cores claras, mas só as 4 primeiras são da paleta original */
   

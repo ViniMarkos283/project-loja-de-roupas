@@ -2,7 +2,7 @@
 
 :root {
   font-family: system-ui;
-  --accent-color: hsl(6, 93%, 71%);
+  --accent-color: var(--cor-5);
   --background-color: #eeeeee;
   --foreground-color: #222222;
 }

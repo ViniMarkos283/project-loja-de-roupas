@@ -1,9 +1,12 @@
 @import url('color_pallete.css');
 
+header, .head{
+    width: 100%;
+}
+
 .head{
     display: flex;
     justify-content: space-around;
-    width: 100%;
     background-color: var(--cor-4);
     padding: 15px;
 }
@@ -57,7 +60,6 @@
         transition: 0.5s;
         right: 0;
         padding: 20% 0 0 0;
-
     }
 
     .header + div {
