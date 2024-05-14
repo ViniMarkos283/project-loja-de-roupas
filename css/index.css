@@ -33,7 +33,7 @@
   border-radius: 20px;
   overflow: hidden;
 
-  > .description {
+  >.description {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -41,8 +41,9 @@
     margin-inline: 10px;
     font-size: 1.1rem;
 
-    > input {
+    >input {
       background-color: var(--accent-color);
+      color: white;
       border-width: 0px;
       border-radius: 10px;
       padding: .5rem;
