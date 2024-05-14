@@ -13,7 +13,7 @@ div {
 .ui {
     background-color: var(--cor-4);
     border-radius: 38px;
-    width: 65%;
+    width: 70vw;
     height: 80%;
 }
 
@@ -33,9 +33,9 @@ div {
 }
 
 .img {
-    width: 100%;
+    width: min-content;
     max-width: 100%;
-    height: min-content;
+    height: 100%;
     border-radius: 18px;
     background-color: white;
 }
