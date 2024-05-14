@@ -1,10 +1,18 @@
-function setClothes(num){
-    sessionStorage.setItem('item', num)
-}
+document.addEventListener('DOMContentLoaded', function () {
+    const botoes = document.querySelectorAll('input[type="button"][value="Comprar"]');
+    botoes.forEach((botao, index) => {
+        botao.addEventListener('click', function () {
+            const indiceBotao = index + 0;
+            sessionStorage.setItem('indiceBotao', indiceBotao);
+            window.location.href = 'troca.html';
+        });
+    });
+});
+
 
 function loadOneProduct() {
     const itens = products()
-    const n = sessionStorage.getItem('item')
+    const n = sessionStorage.getItem('indiceBotao')
 
     image = document.querySelector('#image')
     nm = document.querySelector('#name')
@@ -12,15 +20,10 @@ function loadOneProduct() {
     size = document.querySelector('#size')
     category = document.querySelector('#categ')
 
-    console.log(image)
-    console.log(nm)
-    console.log(description)
-    console.log(size)
-    console.log(category)
-
     image.src = itens[n].img
-    nm.value = itens[n].desc
-    description.value = "Sobre o produto: \n" + itens[n].desc
-    size.value = "Tamanho: " + itens[n].size
-    category.value = "Categoria: " + itens[n].category
+    nm.textContent = itens[n].name
+    document.title = itens[n].name
+    description.textContent = itens[n].desc
+    size.textContent = "Tamanho: " + itens[n].size
+    category.textContent = "Categoria: " + itens[n].type
 }
