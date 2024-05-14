@@ -1,4 +1,5 @@
 
+
 function cadastrar() {
     var nome = document.querySelector('#nome').value;
     var dtNasc = document.querySelector('#dtNasc').value;

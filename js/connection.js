@@ -7,8 +7,9 @@ const mysql = require('mysql2');
 const connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
-  password: 'I%3I0Ii6X65BlD06',
-  database: 'banco_usuarios'
+  password: 'fatec217',
+  database: 'Bazar',
+  port: 3300
 });
 
 connection.connect((err) => {
@@ -23,9 +24,9 @@ module.exports = connection;
 
 // const connection = require('./database');
 
-function getAllUsers() {
+function getAllUsuario() {
   return new Promise((resolve, reject) => {
-    connection.query('SELECT * FROM users', (error, results, fields) => {
+    connection.query('SELECT * FROM Usuarios', (error, results, fields) => {
       if (error) {
         console.log(error);
         reject(error); // Rejeita a promessa com o erro
@@ -36,10 +37,23 @@ function getAllUsers() {
   });
 }
 
-function getUserById(id) {
+// function getUniqueUsuario(email, senha) {
+//   return new Promise((resolve, reject) => {
+//     connection.query('SELECT email,senha FROM Usuarios WHERE email = "?" AND senha = "?"',[email],[senha],(error, results, fields) => {
+//       if (error) {
+//         console.log(error);
+//         reject(error); // Rejeita a promessa com o erro
+//       } else {
+//         console.log("passou con");
+//         resolve(results); // Resolve a promessa com os resultados
+//       }
+//     });
+//   });
+// }
 
+function getUniqueUsuario(email, senha) {
   return new Promise((resolve, reject) => {
-    connection.query('SELECT * FROM users WHERE id = ?', [id], (error, results, fields) => {
+    connection.query('SELECT email, senha FROM Usuarios WHERE email = ? AND senha = ?', [email, senha], (error, results, fields) => {
       if (error) {
         console.log(error);
         reject(error); // Rejeita a promessa com o erro
@@ -50,9 +64,24 @@ function getUserById(id) {
   });
 }
 
-function addUser(user) {
+
+function getUsuarioById(id) {
+
   return new Promise((resolve, reject) => {
-    connection.query('INSERT INTO users SET ?', [user], (error, results, fields) => {
+    connection.query('SELECT * FROM Usuarios WHERE id = ?', [id], (error, results, fields) => {
+      if (error) {
+        console.log(error);
+        reject(error); // Rejeita a promessa com o erro
+      } else {
+        resolve(results); // Resolve a promessa com os resultados
+      }
+    });
+  });
+}
+
+function addUsuario(Usuario) {
+  return new Promise((resolve, reject) => {
+    connection.query('INSERT INTO Usuario SET ?', [Usuario], (error, results, fields) => {
       if (error) {
         console.log(error);
         reject(error); // Rejeita a promessa com o erro
@@ -63,9 +92,9 @@ function addUser(user) {
   });
 }
 
-function updateUser(user,id) {
+function updateUsuario(Usuario,id) {
   return new Promise((resolve, reject) => {
-    connection.query('UPDATE users SET ? WHERE id = ?', [user, id], (error, results, fields) => {
+    connection.query('UPDATE Usuario SET ? WHERE id = ?', [Usuario, id], (error, results, fields) => {
       if (error) {
         console.log(error);
         reject(error); // Rejeita a promessa com o erro
@@ -76,9 +105,9 @@ function updateUser(user,id) {
   });
 }
 
-function deleteUser(id) {
+function deleteUsuario(id) {
   return new Promise((resolve, reject) => {
-    connection.query('DELETE FROM users WHERE id = ?', [id], (error, results, fields) => {
+    connection.query('DELETE FROM Usuarios WHERE id = ?', [id], (error, results, fields) => {
       if (error) {
         console.log(error);
         reject(error); // Rejeita a promessa com o erro
@@ -90,9 +119,10 @@ function deleteUser(id) {
 }
 
 module.exports = {
-  getAllUsers,
-  getUserById,
-  addUser,
-  updateUser,
-  deleteUser
+  getAllUsuario,
+  getUniqueUsuario,
+  getUsuarioById,
+  addUsuario,
+  updateUsuario,
+  deleteUsuario
 };

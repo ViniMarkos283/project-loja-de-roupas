@@ -1,5 +1,7 @@
 var express = require('express');
 
+const cors = require('cors');
+
 var fs = require('fs');
 
 var https = require('https');
@@ -22,10 +24,14 @@ var options = {
 
 
 
-
 var app = express();
+// app.use(cors({
+//     origin: true, // ou você pode especificar uma lista de origens permitidas ['http://example.com', 'https://example.com']
+//     credentials: true // habilita o suporte a credenciais
+// }));
+app.use(cors());
 
-const { getAllUsers, getUserById, addUser, updateUser, deleteUser } = require('./connection');
+const { getAllUsuario,getUniqueUsuario, getUsuarioById, addUsuario, updateUsuario, deleteUsuario } = require('./connection');
 
 // Configure the Express app
 app.set('port', process.env.PORT || 443); // Set the port
@@ -49,11 +55,11 @@ app.get('/', function (req, res) {
 });
 
 // Define routes
-app.get('/users', function (req, res) {
-    getAllUsers()
-        .then(users => {
+app.get('/Usuario', function (req, res) {
+    getAllUsuario()
+        .then(Usuario => {
             // Se os usuários forem recuperados com sucesso, envie-os como resposta
-            res.json(users);
+            res.json(Usuario);
         })
         .catch(error => {
             // Se ocorrer um erro ao obter os usuários, envie uma resposta de erro
@@ -62,12 +68,12 @@ app.get('/users', function (req, res) {
 });
 
 // Define routes
-app.get('/users/:id', function (req, res) {
-    const userId = req.params.id;
-    getUserById(userId)
-        .then(users => {
+app.get('/Usuario/:id', function (req, res) {
+    const UsuarioId = req.params.id;
+    getUsuarioById(UsuarioId)
+        .then(Usuario => {
             // Se os usuários forem recuperados com sucesso, envie-os como resposta
-            res.json(users);
+            res.json(Usuario);
         })
         .catch(error => {
             // Se ocorrer um erro ao obter os usuários, envie uma resposta de erro
@@ -75,23 +81,60 @@ app.get('/users/:id', function (req, res) {
         });
 });
 
-// Define routes
-app.get('/users/add/:nome/:email/:idade', function (req, res) {
 
-    const userNome = req.params.nome;
-    const userEmail = req.params.email;
-    const userAge = req.params.idade;
+// Define routes
+app.get('/usuario/Unique/:email/:senha', function (req, res) {
+    const email = req.params.email;
+    const senha = req.params.senha;
+
+    // Chama a função para buscar um usuário único por email e senha no banco de dados
+    getUniqueUsuario(email, senha)
+        .then(usuario => {
+            // Se o usuário for encontrado, envie-o como resposta
+            res.json(usuario);
+        })
+        .catch(error => {
+            // Se ocorrer um erro ao buscar o usuário, envie uma resposta de erro
+            console.error('Erro ao buscar usuário:', error);
+            res.status(500).send('Erro ao buscar usuário');
+        });
+});
+
+
+// app.get('/Usuario/Unique/:email/:senha', function (req, res) {
+//     const UsuarioEmail = req.params.email;
+//     const UsuarioSenha = req.params.senha;
+
+//     getUniqueUsuario(UsuarioEmail, UsuarioSenha)
+//         .then(Usuario => {
+//             res.send('Hello, HTTPS!');
+//             console.log("passou cons");
+//             // Se os usuários forem recuperados com sucesso, envie-os como resposta
+//             res.json(Usuario);
+//         })
+//         .catch(error => {
+//             // Se ocorrer um erro ao obter os usuários, envie uma resposta de erro
+//             res.status(500).send('Erro ao obter usuários');
+//         });
+// });
+
+// Define routes
+app.get('/Usuario/add/:nome/:email/:idade', function (req, res) {
+
+    const UsuarioNome = req.params.nome;
+    const UsuarioEmail = req.params.email;
+    const UsuarioAge = req.params.idade;
     
-    // Now you can use userId, userName, userEmail, and userAge in your code
-    const user = {
-        nome: userNome,
-      email: userEmail,
-      idade: userAge
+    // Now you can use UsuarioId, UsuarioName, UsuarioEmail, and UsuarioAge in your code
+    const Usuario = {
+        nome: UsuarioNome,
+      email: UsuarioEmail,
+      idade: UsuarioAge
     };
-    addUser(user)
-        .then(users => {
+    addUsuario(Usuario)
+        .then(Usuario => {
             // Se os usuários forem recuperados com sucesso, envie-os como resposta
-            res.json(users);
+            res.json(Usuario);
         })
         .catch(error => {
             // Se ocorrer um erro ao obter os usuários, envie uma resposta de erro
@@ -100,22 +143,22 @@ app.get('/users/add/:nome/:email/:idade', function (req, res) {
 });
 
 // Define routes
-app.get('/users/update/:id/:nome/:email/:idade', function (req, res) {
-    const userId = req.params.id;
-    const userNome = req.params.nome;
-    const userEmail = req.params.email;
-    const userAge = req.params.idade;
+app.get('/Usuario/update/:id/:nome/:email/:idade', function (req, res) {
+    const UsuarioId = req.params.id;
+    const UsuarioNome = req.params.nome;
+    const UsuarioEmail = req.params.email;
+    const UsuarioAge = req.params.idade;
     
-    // Now you can use userId, userName, userEmail, and userAge in your code
-    const user = {
-      nome: userNome,
-      email: userEmail,
-      idade: userAge
+    // Now you can use UsuarioId, UsuarioName, UsuarioEmail, and UsuarioAge in your code
+    const Usuario = {
+      nome: UsuarioNome,
+      email: UsuarioEmail,
+      idade: UsuarioAge
     };
-    updateUser(user,userId)
-        .then(users => {
+    updateUsuario(Usuario,UsuarioId)
+        .then(Usuario => {
             // Se os usuários forem recuperados com sucesso, envie-os como resposta
-            res.json(users);
+            res.json(Usuario);
         })
         .catch(error => {
             // Se ocorrer um erro ao obter os usuários, envie uma resposta de erro
@@ -124,12 +167,12 @@ app.get('/users/update/:id/:nome/:email/:idade', function (req, res) {
 });
 
     // Define routes
-app.get('/users/delete/:id', function (req, res) {
-    const userId = req.params.id;
-    deleteUser(userId)
-        .then(users => {
+app.get('/Usuario/delete/:id', function (req, res) {
+    const UsuarioId = req.params.id;
+    deleteUsuario(UsuarioId)
+        .then(Usuario => {
             // Se os usuários forem recuperados com sucesso, envie-os como resposta
-            res.json(users);
+            res.json(Usuario);
         })
         .catch(error => {
             // Se ocorrer um erro ao obter os usuários, envie uma resposta de erro

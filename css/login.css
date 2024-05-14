@@ -83,3 +83,12 @@ body {
     /* color: #e2abd2; */
     color: #7e6376;
 }
+
+.info{
+    background-color: #ffffffa5;
+    width: 100%;
+    font-size: small;
+    border-radius: 10px;
+    text-align: center;
+    color: #ffffff;
+}
