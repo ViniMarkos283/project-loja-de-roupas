@@ -37,8 +37,7 @@ Back-End:
 - Renato Winícius de Lima Jacob.
 
 # hospedagem: 
-- O website está sendo hospedado no Github Pages, através da branch gh-pgs
-- para acessar o site, utilize esse link: https://vinimarkos283.github.io/project-loja-de-roupas/
+- [ a definir ]
 
 # paleta de cores:
 - #F9F5F6
