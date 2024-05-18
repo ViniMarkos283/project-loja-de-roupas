@@ -1,5 +1,9 @@
 @import url('color_pallete.css');
 
+body {
+    background-color: #ebebeb;
+}
+
 div {
     display: flex;
 }
@@ -13,24 +17,35 @@ div {
 .ui {
     background-color: white;
     border-radius: 38px;
-    width: 80vw;
+    width: 70vw;
     height: min-content;
     box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
 .photo,
-.description,
-.payment {
+.description {
     display: flex;
     flex-direction: column;
     height: 70vh;
-    width: 30%;
-    color: white;
+    width: 50%;
     padding: 20px;
+    text-align: center;
+}
+
+.description select,
+.description input {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    outline: none;
 }
 
 .description div {
     gap: 3px;
+}
+
+.photo {
+    justify-content: center;
 }
 
 .img {
@@ -38,12 +53,12 @@ div {
     object-fit: cover;
     height: 500px;
     border-radius: 18px;
-    background-color: white;
+    background-color: var(--cor-4);
 }
 
-.right {
+.description {
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .data {
@@ -51,12 +66,13 @@ div {
     border: 0 none;
     outline: none;
     font-size: x-large;
-    color: white;
+    color: black;
     text-align: center;
 }
 
 #name {
     font-size: xx-large;
+    font-weight: bold;
 }
 
 #desc {

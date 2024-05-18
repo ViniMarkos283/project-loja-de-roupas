@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const botoes = document.querySelectorAll('input[type="button"][value="Comprar"]');
+    const botoes = document.querySelectorAll('input[type="button"][value="Trocar"]');
     botoes.forEach((botao, index) => {
         botao.addEventListener('click', function () {
             const indiceBotao = index + 0;
@@ -17,13 +17,11 @@ function loadOneProduct() {
     image = document.querySelector('#image')
     nm = document.querySelector('#name')
     description = document.querySelector('#desc')
-    size = document.querySelector('#size')
     category = document.querySelector('#categ')
 
     image.src = itens[n].img
     nm.textContent = itens[n].name
     document.title = itens[n].name
     description.textContent = itens[n].desc
-    size.textContent = "Tamanho: " + itens[n].size
     category.textContent = "Categoria: " + itens[n].type
 }
