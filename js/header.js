@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     var headerDiv = document.querySelector("div.header");
+    var footerDiv = document.querySelector("div.footer");
 
     if (headerDiv) {
         var headerHTML = `
@@ -20,16 +21,65 @@ document.addEventListener("DOMContentLoaded", function () {
             <a href="./login.html"><img src="../img/icons/user.png" alt="login/cadastro" class="icon">Fazer login</a>
     </div>
         `;
+
+        if (footerDiv) {
+            var footerHTML = `
+            <footer>
+        <div>
+            <div>
+                <ul>
+                    <p>Populares</p>
+                    <li><a href="index.html">Página inicial</a></li>
+                    <li><a href="novoAnuncio.html">Criar anuncio</a></li>
+                    <li><a href="login.html">Fazer o login</a></li>
+                    <li><a href="cadastro.html">Cadastre-se</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <p>Sobre o Bazar</p>
+                    <li><a href="#">Sobre o Bazar</a></li>
+                    <li><a href="#">Perguntas Frequentes</a></li>
+                    <li><a href="#">Entre em contato</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <p>Nossas redes Sociais</p>
+                    <li><i class="bi bi-facebook"></i><a href="">Facebook</a></li>
+                    <li><i class="bi bi-instagram"></i><a href="">Instagram</a></li>
+                    <li><i class="bi bi-linkedin"></i><a href="">Linkedin</a></li>
+                    <li><i class="bi bi-youtube"></i><a href="">Youtube</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <p>Integrantes</p>
+                    <li>Luciana Guedes de Araújo</li>
+                    <li>Marcos Vinicius de Oliveira</li>
+                    <li>Pedro Henrique S. Bernardo</li>
+                    <li>Renato Winícius de Lima Jacob</li>
+                </ul>
+            </div>
+        </div>
+
+        <p>&copy; 2024. Todos os direitos reservados.</p>
+
+    </footer>
+            `;
+        }
+
         headerDiv.innerHTML = headerHTML;
+        footerDiv.innerHTML = footerHTML;
     }
 });
 
-    function openMenu(){
-        lateral = document.querySelector(".lateral")
+function openMenu() {
+    lateral = document.querySelector(".lateral")
 
-        if (lateral.classList.contains('open')) {
-            lateral.classList.remove('open');
-        } else {
-            lateral.classList.add('open');
-        }
+    if (lateral.classList.contains('open')) {
+        lateral.classList.remove('open');
+    } else {
+        lateral.classList.add('open');
     }
+}

@@ -1,9 +1,5 @@
 @import url('color_pallete.css');
 
-body {
-    background-color: #ebebeb;
-}
-
 div {
     display: flex;
 }
@@ -12,6 +8,7 @@ div {
     height: 90vh;
     align-items: center;
     justify-content: center;
+    background-color: var(--cor-1);
 }
 
 .ui {
