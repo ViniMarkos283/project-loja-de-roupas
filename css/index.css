@@ -33,7 +33,7 @@
   grid-template-columns: subgrid;
   grid-row: span 3;
 
-  >.image {
+  > .image {
     background-size: cover;
     width: 100%;
     height: 250px;
@@ -43,7 +43,7 @@
     border-radius: var(--border-radius);
   }
   
-  >.description {
+  > .description {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -51,11 +51,11 @@
     overflow-wrap: break-word;
     text-wrap: pretty;
 
-    :is(:not(input)) {
+    > span {
       margin-block: var(--card-margin);
     }
 
-    >input {
+    > input {
       width: 100%;
       background-color: var(--accent-color);
       color: white;
@@ -69,8 +69,7 @@
 
 .content-grid {
   display: grid;
-  /* grid-template-columns: repeat(3, 1fr); */
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
   gap: 1.5rem;
   padding: 1.5rem;
 }
