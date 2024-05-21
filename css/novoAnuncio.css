@@ -1,0 +1,52 @@
+@import url('color_pallete.css');
+
+section{
+    height: 90vh;
+}
+
+.center{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.ui{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--cor-2);
+    width: 50vw;
+    height: 80vh;
+    border-radius: 18px;
+    padding: 30px;
+    
+}
+
+.ui h3{
+    text-align: center;
+}
+
+.ui input, .ui select{
+    width: 80%;
+    float: right;
+    padding: 5px;
+}
+
+.send{
+    width: 100% !important;
+    font-weight: bolder;
+    color: white;
+    padding: 10px !important;
+    border: 0 none;
+    border-radius: 18px;
+    background-color: var(--cor-5);
+    transition: 0.5s;
+}
+
+.send:hover{
+    background-color: white;
+    color: var(--cor-5);
+    transition: 0.5s;
+
+}

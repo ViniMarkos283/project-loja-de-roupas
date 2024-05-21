@@ -1,5 +1,9 @@
 @import url('color_pallete.css');
 
+body {
+    background-color: #ebebeb;
+}
+
 div {
     display: flex;
 }
@@ -11,38 +15,50 @@ div {
 }
 
 .ui {
-    background-color: var(--cor-4);
+    background-color: white;
     border-radius: 38px;
     width: 70vw;
-    height: 80%;
+    height: min-content;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
-.left,
-.right {
-    height: 100%;
-    color: white;
+.photo,
+.description {
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    width: 50%;
     padding: 20px;
+    text-align: center;
 }
 
-.left {
-    width: 35%;
+.description select,
+.description input {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    outline: none;
 }
 
-.right {
-    width: 65%;
+.description div {
+    gap: 3px;
+}
+
+.photo {
+    justify-content: center;
 }
 
 .img {
-    width: min-content;
-    max-width: 100%;
-    height: 100%;
+    width: 500px;
+    object-fit: cover;
+    height: 500px;
     border-radius: 18px;
-    background-color: white;
+    background-color: var(--cor-4);
 }
 
-.right {
+.description {
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .data {
@@ -50,12 +66,13 @@ div {
     border: 0 none;
     outline: none;
     font-size: x-large;
-    color: white;
+    color: black;
     text-align: center;
 }
 
 #name {
     font-size: xx-large;
+    font-weight: bold;
 }
 
 #desc {
@@ -64,19 +81,47 @@ div {
     text-align: justify;
 }
 
-.switch {
+.switch,
+.fvrt {
     width: 50%;
-    align-self: center;
     background-color: var(--cor-5);
     color: white;
     padding: 10px;
     border: 0 none;
-    border-radius: 18px;
     font-weight: bold;
     transition: 0.5s;
 }
 
-.switch:hover {
+.switch {
+    border-radius: 18px 0 0 18px;
+}
+
+.fvrt {
+    border-radius: 0 18px 18px 0;
+}
+
+.small {
+    width: 20px;
+    height: min-content;
+    align-self: center;
+    filter: invert(100);
+}
+
+.switch .small {
+    float: left;
+}
+
+.fvrt .small {
+    float: right;
+}
+
+.switch:hover .small,
+.fvrt:hover .small {
+    filter: brightness(0) saturate(100%) invert(73%) sepia(22%) saturate(1498%) hue-rotate(210deg) brightness(85%) contrast(80%);
+}
+
+.switch:hover,
+.fvrt:hover {
     background-color: white;
     color: var(--cor-5);
     transition: 0.5s;
