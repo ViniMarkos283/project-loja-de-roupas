@@ -2,7 +2,7 @@ let carrinho = [];
 
 
 function adicionarItem(img, nome, preco) {
-    carrinho.push({img, nome, preco });
+    carrinho.push({ img, nome, preco });
     atualizarCarrinho();
 }
 
@@ -24,11 +24,14 @@ function atualizarCarrinho() {
 
     carrinho.forEach((item, index) => {
         const itemElement = document.createElement('div');
-        itemElement.innerHTML = 
-        `
+        itemElement.innerHTML =
+            `
         <div class="resultDiv row lines">
        <div class="col">  <img class="imgIcon" src="${item.img}" alt="${item.nome}"></div>
-       <div class="col"> <p class="itens">${item.nome} - R$ ${item.preco.toFixed(2)} </p></div>
+       <div class="col"> 
+       <p class="itens">${item.nome}<\p>
+       <p> R$ ${item.preco.toFixed(2)} </p>
+       </div>
        <div class="col"> <button class="btnRemove" onclick="removerItem(${index})">Remover</button></div>
                     </div>
                 `;
@@ -43,6 +46,6 @@ function atualizarCarrinho() {
 }
 
 
-adicionarItem("https://images.pexels.com/photos/291759/pexels-photo-291759.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",'Produto A', 10.50);
-adicionarItem("https://images.pexels.com/photos/291759/pexels-photo-291759.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",'Produto B', 20.75);
-adicionarItem("https://images.pexels.com/photos/291759/pexels-photo-291759.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",'Produto C', 15.00);
+adicionarItem("https://images.pexels.com/photos/291759/pexels-photo-291759.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", 'Produto A', 10.50);
+adicionarItem("https://images.pexels.com/photos/291759/pexels-photo-291759.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", 'Produto B', 20.75);
+adicionarItem("https://images.pexels.com/photos/291759/pexels-photo-291759.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", 'Produto C', 15.00);
