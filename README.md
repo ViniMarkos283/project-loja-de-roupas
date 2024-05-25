@@ -37,13 +37,17 @@ Back-End:
 - Renato Winícius de Lima Jacob.
 
 # hospedagem: 
-- Github
+- [ a definir ]
 
 # paleta de cores:
 - #F9F5F6
 - #F8E8EE
 - #FDCEDF
 - #F2BED1
+
+extras:
+- #AD88C6
+- #7469B6;
 
 # Breve explicação sobre as paginas e suas devidas funções:
 - index > onde começa, deve conter a lista de roupas como uma vitrine, para o user comprar, alugar ou doar, o ideal é q os produtos saissem direto do BD;
@@ -52,3 +56,6 @@ Back-End:
 - troca > página individual para visualizar e solicitar a troca de uma unica peça escolhida, igual no Mercado Livre, por exemplo;
 - criação de novo produto > além da obtenção, também haverá uma página para criar novos anuncios de roupas, sendo esta responsável por adicionar novos produtos no BD;
 - [vago para adição de novas págs, se necessário]
+
+  # Casos de Uso
+  https://drive.google.com/file/d/1Cati15HMN4HRRDuOetbtawwhNz8UExO2/view?usp=sharing (temporário)

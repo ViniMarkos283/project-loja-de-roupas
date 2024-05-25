@@ -1,138 +1,85 @@
-var express = require('express');
+// var express = require('express');
+// var fs = require('fs');
+// var https = require('https');
 
-var fs = require('fs');
+// // Configurações de SSL/TLS
+// var options = {
+//     key: fs.readFileSync('./ssl/private/name-key.pem'),
+//     cert: fs.readFileSync('./ssl/name-cert.pem'),
+//     ca: fs.readFileSync('./ssl/cacert.pem'),
+//     requestCert: false,
+//     rejectUnauthorized: true
+// };
 
-var https = require('https');
+// var app = express();
+// const { getAllUsers, getUserById, addUser, updateUser, deleteUser, getAllCarrinho } = require('./connection');
 
-var options = {
-    key: fs.readFileSync('./ssl/private/name-key.pem'),
-    cert: fs.readFileSync('./ssl/name-cert.pem'),
-    ca: fs.readFileSync('./ssl/cacert.pem'),
-    requestCert: false,
-    rejectUnauthorized: true
-};
+// // Configuração do servidor
+// app.set('port', process.env.PORT || 443);
 
+// // Middlewares
+// app.use(express.json());
+// app.use(express.urlencoded({ extended: false }));
 
-// const router = express.Router();
-// const controller = require('../controllers/personController')
-// router.post('/', controller.post);
-// router.put('/:id', controller.put);
-// router.delete('/:id', controller.delete);
-// module.exports = router;
+// // Criação do servidor HTTPS
+// var server = https.createServer(options, app);
 
+// // Início do servidor
+// server.listen(app.get('port'), function () {
+//     console.log("Servidor HTTPS iniciado na porta " + app.get('port'));
+// });
 
+// // Rotas
 
+// // Rota raiz
+// app.get('/', function (req, res) {
+//     res.send('Hello, HTTPS!');
+// });
 
-var app = express();
+// // Rota para obter todos os usuários
+// app.get('/users', function (req, res) {
+//     getAllUsers()
+//         .then(users => res.json(users))
+//         .catch(error => res.status(500).send('Erro ao obter usuários: ' + error));
+// });
 
-const { getAllUsers, getUserById, addUser, updateUser, deleteUser } = require('./connection');
+// // Rota para obter um usuário por ID
+// app.get('/users/:id', function (req, res) {
+//     const userId = req.params.id;
+//     getUserById(userId)
+//         .then(user => res.json(user))
+//         .catch(error => res.status(500).send('Erro ao obter usuário: ' + error));
+// });
 
-// Configure the Express app
-app.set('port', process.env.PORT || 443); // Set the port
+// // Rota para adicionar um usuário
+// app.post('/users', function (req, res) {
+//     const user = req.body;
+//     addUser(user)
+//         .then(insertId => res.json({ message: 'Usuário adicionado com ID: ' + insertId }))
+//         .catch(error => res.status(500).send('Erro ao adicionar usuário: ' + error));
+// });
 
-// Define middleware
-app.use(express.json()); // Parse JSON bodies
+// // Rota para atualizar um usuário
+// app.put('/users/:id', function (req, res) {
+//     const userId = req.params.id;
+//     const user = req.body;
+//     updateUser(user, userId)
+//         .then(affectedRows => res.json({ message: 'Usuário atualizado', affectedRows }))
+//         .catch(error => res.status(500).send('Erro ao atualizar usuário: ' + error));
+// });
 
-app.use(express.urlencoded({ extended: false })); // Parse URL-encoded bodies
+// // Rota para deletar um usuário
+// app.delete('/users/:id', function (req, res) {
+//     const userId = req.params.id;
+//     deleteUser(userId)
+//         .then(affectedRows => res.json({ message: 'Usuário deletado', affectedRows }))
+//         .catch(error => res.status(500).send('Erro ao deletar usuário: ' + error));
+// });
 
-// Create an HTTPS server using the Express app and SSL/TLS options
-var server = https.createServer(options, app);
-
-// Start listening for incoming HTTPS requests
-server.listen(app.get('port'), function () {
-    console.log("Started listening");
-});
-
-// Define routes
-app.get('/', function (req, res) {
-    res.send('Hello, HTTPS!');
-});
-
-// Define routes
-app.get('/users', function (req, res) {
-    getAllUsers()
-        .then(users => {
-            // Se os usuários forem recuperados com sucesso, envie-os como resposta
-            res.json(users);
-        })
-        .catch(error => {
-            // Se ocorrer um erro ao obter os usuários, envie uma resposta de erro
-            res.status(500).send('Erro ao obter usuários');
-        });
-});
-
-// Define routes
-app.get('/users/:id', function (req, res) {
-    const userId = req.params.id;
-    getUserById(userId)
-        .then(users => {
-            // Se os usuários forem recuperados com sucesso, envie-os como resposta
-            res.json(users);
-        })
-        .catch(error => {
-            // Se ocorrer um erro ao obter os usuários, envie uma resposta de erro
-            res.status(500).send('Erro ao obter usuários');
-        });
-});
-
-// Define routes
-app.get('/users/add/:nome/:email/:idade', function (req, res) {
-
-    const userNome = req.params.nome;
-    const userEmail = req.params.email;
-    const userAge = req.params.idade;
-    
-    // Now you can use userId, userName, userEmail, and userAge in your code
-    const user = {
-        nome: userNome,
-      email: userEmail,
-      idade: userAge
-    };
-    addUser(user)
-        .then(users => {
-            // Se os usuários forem recuperados com sucesso, envie-os como resposta
-            res.json(users);
-        })
-        .catch(error => {
-            // Se ocorrer um erro ao obter os usuários, envie uma resposta de erro
-            res.status(500).send('Erro ao obter usuários');
-        });
-});
-
-// Define routes
-app.get('/users/update/:id/:nome/:email/:idade', function (req, res) {
-    const userId = req.params.id;
-    const userNome = req.params.nome;
-    const userEmail = req.params.email;
-    const userAge = req.params.idade;
-    
-    // Now you can use userId, userName, userEmail, and userAge in your code
-    const user = {
-      nome: userNome,
-      email: userEmail,
-      idade: userAge
-    };
-    updateUser(user,userId)
-        .then(users => {
-            // Se os usuários forem recuperados com sucesso, envie-os como resposta
-            res.json(users);
-        })
-        .catch(error => {
-            // Se ocorrer um erro ao obter os usuários, envie uma resposta de erro
-            res.status(500).send('Erro ao obter usuários');
-        });
-});
-
-    // Define routes
-app.get('/users/delete/:id', function (req, res) {
-    const userId = req.params.id;
-    deleteUser(userId)
-        .then(users => {
-            // Se os usuários forem recuperados com sucesso, envie-os como resposta
-            res.json(users);
-        })
-        .catch(error => {
-            // Se ocorrer um erro ao obter os usuários, envie uma resposta de erro
-            res.status(500).send('Erro ao obter usuários');
-        });
-});
+// // Rota para obter itens do carrinho de um usuário
+// app.get('/cart/:user_id', function (req, res) {
+//     const userId = req.params.user_id;
+//     getAllCarrinho(userId)
+//         .then(items => res.json(items))
+//         .catch(error => res.status(500).send('Erro ao obter itens do carrinho: ' + error));
+// });

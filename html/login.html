@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
- 
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,41 +10,36 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/login.css">
 </head>
- 
+
 <body class="">
     <div class="spaceLogin">
-        <div class="row">
-            <div class="col"></div>
-            <div class="col backh1">
-                <h1>Login</h1>
-            </div>
-            <div class="col"></div>
-        </div>
         <div>
             <section>
                 <article>
-                    <div class="row spaceTop">
- 
-                        <div class="col">
- 
-                        </div>
-                        <div class="col fundoBranco backLogin loginBack">
-                            <form>
-                                <div class="mb-3">
-                                    <label for="Email" class="form-label">Email</label>
-                                    <input type="email" id="email" class="form-control backInput" placeholder="example@gmail.com"
-                                        aria-describedby="emailHelp">
+                    <div class="row">
+                        <div class="col"></div>
+                        <div class="row spaceTop backLogin">
+                            <div class="col"></div>
+                            <div class="col fundoBranco  loginBack">
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="Email" class="form-label">Email</label>
+                                        <input type="email" id="email" class="form-control backInput"
+                                            placeholder="example@gmail.com" aria-describedby="emailHelp">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="Senha" class="form-label">Senha</label>
+                                        <input type="password" id="senha" class="form-control backInput">
+                                    </div>
+    
+                                </form>
+                                <div class="btLogin conta">
+                                    <p>ainda não Possui uma conta? <a href="../html/cadastro.html">Cadastro</a></p>
+                                    <p>Voltar Para Loja <a href="../html/index.html">Home</a></p>
+                                    <button type="submit" class="btn bt" onclick="login()">Entrar</button>
                                 </div>
-                                <div class="mb-3">
-                                    <label for="Senha" class="form-label">Senha</label>
-                                    <input type="password" id="senha" class="form-control backInput">
-                                </div>
-                               
-                            </form>
-                            <div class="btLogin">
-                                <button type="submit" class="btn bt" onclick="login()">Enviar</button>
-                                <button type="submit" class="btn bt" onclick="cadastro()">Cadastro</button>
                             </div>
+                            <div class="col"></div>
                         </div>
                         <div class="col"></div>
                     </div>
@@ -62,5 +57,9 @@
     function cadastro() {
         window.location.assign("../html/cadastro.html");
     }
-  </script>
+    function home() {
+        window.location.assign("../html/index.html");
+    }
+</script>
+
 </html>

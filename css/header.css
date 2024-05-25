@@ -3,29 +3,36 @@
 
 header,
 .head {
-    width: 100%;
+    width: 100vw;
 }
 
 .head {
     display: flex;
     justify-content: space-around;
     background-color: var(--cor-4);
-    padding: 15px;
+    padding: 10px;
+    align-items: center;
 }
 
-.head .icon,
-.lateral .icon {
-    width: 40px;
-    height: 40px;
-    filter: invert(100);
+.head i,
+.lateral i {
+font-size: xx-large;
+    color: white;
 }
 
 .head input {
     width: 60%;
+    padding: 10px;
     border: 0 none;
     border-radius: 18px;
     outline: none;
     text-indent: 20px;
+}
+
+.head img{
+    width: 40px;
+    align-self: center;
+    filter: invert(100);
 }
 
 .head button {
@@ -42,12 +49,12 @@ header,
 /* footer */
 footer {
     display: flex;
-    flex-direction: column;
     text-align: left;
+    flex-direction: column;
     background-color: black;
     color: white;
     padding: 30px 0 30px 0;
-    width: 100%;
+    width: 100vw;
 }
 
 footer>div {
@@ -67,7 +74,13 @@ footer a {
     text-decoration: none;
 }
 
-footer i {
+footer li:hover a,
+footer li:hover{
+    color: var(--cor-5);
+    transition: 0.2s;
+}
+
+footer i{
     margin: 0 15px 0 0;
 }
 
@@ -80,8 +93,6 @@ footer p:last-child {
     font-size: medium;
     align-self: center;
 }
-
-
 
 /* mobile settings */
 @media screen and (max-width: 767px) {
@@ -103,33 +114,46 @@ footer p:last-child {
         position: fixed;
         flex-direction: column;
         background-color: var(--cor-4);
-        height: 100vh;
+        height: 110vh;
         width: 0%;
         transition: 0.5s;
         right: 0;
         padding: 20% 0 0 0;
     }
 
-    .header+div {
+    .header + *  {
         padding-top: 60px;
     }
 
-    .lateral a {
+    .lateral > a {
         text-decoration: none;
         color: white;
         font-weight: bold;
         white-space: nowrap;
+        padding: 10px;
     }
 
-    .lateral .icon {
-        margin: 5px;
-        margin: 10px;
-        padding: 5px;
+    .lateral .bi {
+        margin: 15px;
     }
 
     .open {
         width: 50%;
         transition: 0.5s;
+    }
+
+    footer > div{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    footer > div > div:nth-child(1), 
+    footer > div > div:nth-child(3){
+        text-align: right;
+    } 
+
+    footer > div > div:nth-child(3) i{
+        float: left;
     }
 
 }
