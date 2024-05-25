@@ -1,39 +1,42 @@
 @import url('color_pallete.css');
 
-section{
-    height: 90vh;
+section {
+    background-color: var(--cor-1);
+    height: 93vh;
 }
 
-.center{
+.center {
     display: flex;
     height: 100%;
     align-items: center;
     justify-content: center;
 }
 
-.ui{
+.ui {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: var(--cor-2);
+    background-color: white;
     width: 50vw;
     height: 80vh;
     border-radius: 18px;
     padding: 30px;
-    
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+
 }
 
-.ui h3{
+.ui h3 {
     text-align: center;
 }
 
-.ui input, .ui select{
-    width: 80%;
+.ui input,
+.ui select {
+    width: 75%;
     float: right;
     padding: 5px;
 }
 
-.send{
+.send {
     width: 100% !important;
     font-weight: bolder;
     color: white;
@@ -41,12 +44,33 @@ section{
     border: 0 none;
     border-radius: 18px;
     background-color: var(--cor-5);
+    border: 2px solid transparent;
     transition: 0.5s;
 }
 
-.send:hover{
+.send:hover {
     background-color: white;
     color: var(--cor-5);
     transition: 0.5s;
+    border: 2px solid var(--cor-5);
+
+}
+
+
+/* mobile settings */
+@media screen and (max-width: 767px) {
+
+    section{
+        height: 100vh;
+    }
+
+.ui{
+    width: 90vw;
+    height: 70vh;
+}
+
+.ui input, .ui select{
+    width: 100%;
+}
 
 }

@@ -14,9 +14,5 @@ roupas:
 icons:
 - icon Cattleya : https://firebasestorage.googleapis.com/v0/b/bazar-cattleya.appspot.com/o/cattleya.png?alt=media&token=95fec146-8efc-4b2a-ba12-1885698bdaf6
 - loja-roupa : https://firebasestorage.googleapis.com/v0/b/bazar-cattleya.appspot.com/o/loja-roupa.png?alt=media&token=d2209285-9154-4afa-9941-6c42fb986ef8
-- menu : https://firebasestorage.googleapis.com/v0/b/bazar-cattleya.appspot.com/o/menu.png?alt=media&token=f0349738-6dc4-439a-9d8c-ede627f030d0
-- novaAdição : https://firebasestorage.googleapis.com/v0/b/bazar-cattleya.appspot.com/o/novaAdi%C3%A7%C3%A3o.png?alt=media&token=da78c531-4f66-4377-a89e-9f5dec0c21ba
-- shopcart : https://firebasestorage.googleapis.com/v0/b/bazar-cattleya.appspot.com/o/shopcart.png?alt=media&token=ef2c82ff-16af-40d1-9bd3-bde31519cf84
-- user : https://firebasestorage.googleapis.com/v0/b/bazar-cattleya.appspot.com/o/user.png?alt=media&token=5a60e182-dbbd-4900-9f13-a5aa75efc0e4
-- addCart : https://firebasestorage.googleapis.com/v0/b/bazar-cattleya.appspot.com/o/addCart.png?alt=media&token=8d5372c4-f317-446e-b880-c3586f125d06
-- buy : https://firebasestorage.googleapis.com/v0/b/bazar-cattleya.appspot.com/o/buy.png?alt=media&token=cdeadb53-af16-4eaa-ba9e-69ccb491acaf
+
+o resto delas foi pego pelo proprio bootstrap 
