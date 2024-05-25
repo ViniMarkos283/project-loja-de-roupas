@@ -1,21 +1,25 @@
 @import url('color_pallete.css');
 
+section{
+    height: 100vh;
+    background-color: var(--cor-1);
+}
+
 div {
     display: flex;
 }
 
 .center {
-    height: 90vh;
+    height: 100vh;
     align-items: center;
     justify-content: center;
-    background-color: var(--cor-1);
 }
 
 .ui {
     background-color: white;
     border-radius: 38px;
     width: 80vw;
-    height: max-content;
+    height: min-content;
     box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
@@ -54,8 +58,7 @@ div {
 }
 
 .description {
-    flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .data {
@@ -86,6 +89,7 @@ div {
     padding: 10px;
     border: 0 none;
     font-weight: bold;
+    border: 2px solid transparent;
     transition: 0.5s;
 }
 
@@ -97,24 +101,12 @@ div {
     border-radius: 0 18px 18px 0;
 }
 
-.small {
-    width: 20px;
-    height: min-content;
-    align-self: center;
-    filter: invert(100);
-}
-
-.switch .small {
+.switch i {
     float: left;
 }
 
-.fvrt .small {
+.fvrt i {
     float: right;
-}
-
-.switch:hover .small,
-.fvrt:hover .small {
-    filter: brightness(0) saturate(100%) invert(73%) sepia(22%) saturate(1498%) hue-rotate(210deg) brightness(85%) contrast(80%);
 }
 
 .switch:hover,
@@ -122,11 +114,28 @@ div {
     background-color: white;
     color: var(--cor-5);
     transition: 0.5s;
+    border: 2px solid var(--cor-5);
 }
 
 /* mobile settings */
 @media screen and (max-width: 767px) {
     .ui {
-        height: 75%;
+        height: min-content;
+        width: 90vw;
+        flex-direction: column;
+    }
+
+    .photo, .description{
+        width: 100%;
+        height: min-content;
+        gap: 10px;
+    }
+
+    .img{
+        height: 300px;
+    }
+
+    #name{
+        font-size: large
     }
 }
