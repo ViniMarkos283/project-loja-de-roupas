@@ -8,7 +8,7 @@ const connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   password: 'I%3I0Ii6X65BlD06',
-  database: 'banco_usuarios'
+  database: 'bazar'
 });
 
 connection.connect((err) => {
@@ -88,24 +88,6 @@ function deleteUser(id) {
   });
 }
 
-function getAllCarrinho(user_id) {
-  return new Promise((resolve, reject) => {
-    connection.query(`
-      SELECT p.product_name, ci.quantity
-      FROM cart_items ci
-      JOIN products p ON ci.product_id = p.product_id
-      WHERE ci.cart_id = (SELECT cart_id FROM carts WHERE user_id = ?)
-    `, [user_id], (error, results, fields) => {
-      if (error) {
-        console.log(error);
-        reject(error);
-      } else {
-        resolve(results);
-      }
-    });
-  });
-}
-
 // Funções para gerenciar produtos e carrinhos
 
 function getAllProducts() {
@@ -172,6 +154,32 @@ function deleteProduct(id) {
     });
   });
 }
+
+
+function getAllCarrinho(userId) {
+  return new Promise((resolve, reject) => {
+    connection.query(
+      `
+      SELECT p.product_name, oi.quantity, p.product_photo, (oi.price * oi.quantity) AS total_price
+FROM order_items oi 
+JOIN products p ON oi.product_id = p.product_id
+JOIN orders o ON oi.order_id = o.order_id
+JOIN users u ON o.user_id = u.user_id
+WHERE u.user_id =  ?      
+      `,
+      [userId],
+      (error, results, fields) => {
+        if (error) {
+          console.log(error);
+          reject(error);
+        } else {
+          resolve(results);
+        }
+      }
+    );
+  });
+}
+
 
 module.exports = {
   getAllUsers,

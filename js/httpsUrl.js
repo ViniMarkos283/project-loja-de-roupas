@@ -13,24 +13,24 @@ var options = {
 
 var app = express();
 
-// Use o middleware cors
+// Configure o middleware cors para permitir solicitações de todas as origens
 app.use(cors());
 
-const { getAllUsers, getUserById, addUser, updateUser, deleteUser } = require('./connection');
+const { getAllUsers, getUserById, addUser, updateUser, deleteUser,getAllCarrinho,getProductById } = require('./connection');
 
-// Configure the Express app
-app.set('port', process.env.PORT || 443); // Set the port
+// Configure o Express
+app.set('port', process.env.PORT || 443); // Define a porta
 
-// Define middleware
-app.use(express.json()); // Parse JSON bodies
-app.use(express.urlencoded({ extended: false })); // Parse URL-encoded bodies
+// Defina os middlewares
+app.use(express.json()); // Analise corpos JSON
+app.use(express.urlencoded({ extended: false })); // Analise corpos codificados em URL
 
-// Create an HTTPS server using the Express app and SSL/TLS options
+// Crie um servidor HTTPS usando o Express e as opções SSL/TLS
 var server = https.createServer(options, app);
 
-// Start listening for incoming HTTPS requests
+// Comece a escutar as solicitações HTTPS recebidas
 server.listen(app.get('port'), function () {
-    console.log("Started listening");
+    console.log("Servidor iniciado na porta: " + app.get('port'));
 });
 
 // Define routes
@@ -93,14 +93,20 @@ app.delete('/users/:id', function (req, res) {
         });
 });
 
+
+
+
 app.get('/cart/:userId', function (req, res) {
     const userId = req.params.userId;
-    // Aqui você deveria implementar a lógica para buscar os itens do carrinho do usuário
-    res.json([
-        // Exemplo de resposta
-        { product_name: 'Produto 1', quantity: 2, price: 50 },
-        { product_name: 'Produto 2', quantity: 1, price: 30 }
-    ]);
+    getAllCarrinho(userId)
+    .then(user => {
+        res.json(user);
+    })
+    .catch(error => {
+        res.status(500).send('Erro ao buscar itens no carrinho');
+    });
 });
+
+getProductById
 
 module.exports = app;

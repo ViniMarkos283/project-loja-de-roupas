@@ -17,8 +17,9 @@ h1 {
 }
 
   .imgIcon{
-    height: 7vw;
-    width: 7vw;
+    padding: 10px;
+    height: 10vw;
+    width: 10vw;
     border-radius: 50%;
 }
 
@@ -61,4 +62,20 @@ h1 {
     box-shadow:5px 5px 10px rgba(0, 0, 0, 0.4);
     max-width: 600px;
 }
+.productsItem{
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
 
+.fistProd{
+    margin-top: 20%;
+}
+@keyframes colorChange {
+    0% { color: #ff69b4; }   /* Rosa claro */
+    20% { color: #ff1493; }  /* Rosa profundo */
+    40% { color: #c71585; }  /* Rosa escuro */
+    60% { color: #9370db; }  /* Roxo médio claro */
+    80% { color: #ba55d3; }  /* Roxo claro */
+    100% { color: #ff69b4; } /* Volta ao rosa claro */
+  }
