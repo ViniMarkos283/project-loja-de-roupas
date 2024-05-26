@@ -49,6 +49,19 @@ function getUserById(id) {
   });
 }
 
+function getUserEmail(email,pass) {
+  return new Promise((resolve, reject) => {
+    connection.query('SELECT * FROM users WHERE email = ? AND password = ?', [email], [pass],(error, results, fields) => {
+      if (error) {
+        console.log(error);
+        reject(error);
+      } else {
+        resolve(results);
+      }
+    });
+  });
+}
+
 function addUser(user) {
   return new Promise((resolve, reject) => {
     connection.query('INSERT INTO users SET ?', user, (error, results, fields) => {
@@ -183,6 +196,7 @@ WHERE u.user_id =  ?
 
 module.exports = {
   getAllUsers,
+  getUserEmail,
   getUserById,
   addUser,
   updateUser,
