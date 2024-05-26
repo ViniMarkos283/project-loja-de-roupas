@@ -95,3 +95,10 @@
   80% { color: #ba55d3; }  /* Roxo claro */
   100% { color: #ff69b4; } /* Volta ao rosa claro */
 }
+
+/* mobile settings */
+@media screen and (max-width: 767px) {
+  .ads{
+    font-size: x-large;
+  }
+}
