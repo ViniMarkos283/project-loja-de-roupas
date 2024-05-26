@@ -14,18 +14,28 @@ async function fetchCartItems( userId) {
     }
 }
 
-
-function fetchUserEmail( userEmail, userPass ) {
+async function fetchDeleteItem( cartId,idProd) {
     try {
-        const response = fetch(`https://localhost/users/:${userEmail}/:${userPass}`);
+        const response = await fetch(`https://localhost/cart/${cartId}/${idProd}`);
         if (!response.ok) {
-            throw new Error('senha ou email incorretos');
+            throw new Error('Erro ao deletar item do carrinho');
         }
-        return response.json();
+        return await response.json();
     } catch (error) {
         console.error(error);
         return []; // Retorna um array vazio em caso de erro
     }
 }
-  
 
+async function fetchUser(email, pass) {
+    try {
+        const response = await fetch(`https://localhost/user/${encodeURIComponent(email)}/${encodeURIComponent(pass)}`);
+        if (!response.ok) {
+            throw new Error('Senha ou email incorretos');
+        }
+        return await response.json();
+    } catch (error) {
+        console.error("Erro ao buscar usuário: ", error);
+        return [];
+    }
+}

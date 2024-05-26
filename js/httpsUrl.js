@@ -16,7 +16,7 @@ var app = express();
 // Configure o middleware cors para permitir solicitações de todas as origens
 app.use(cors());
 
-const { getAllUsers, getUserById, addUser, updateUser, deleteUser,getAllCarrinho,getProductById,getUserEmail } = require('./connection');
+const { getAllUsers, getUserById, addUser, updateUser, deleteUser,getAllCarrinho,getProductById,getUserEmail,deleteProductCarrinho } = require('./connection');
 
 // Configure o Express
 app.set('port', process.env.PORT || 443); // Define a porta
@@ -58,15 +58,15 @@ app.get('/users/:id', function (req, res) {
             res.status(500).send('Erro ao obter usuário');
         });
 });
-
-app.get('/users/:email/:pass', function (req, res) {
+app.get('/user/:email/:pass', function (req, res) {
     const userEmail = req.params.email;
     const userPass = req.params.pass;
-    getUserEmail(userEmail,userPass)
+    getUserEmail(userEmail, userPass)
         .then(user => {
             res.json(user);
         })
         .catch(error => {
+            console.error("Erro ao obter usuário: ", error);
             res.status(500).send('Erro ao obter usuário');
         });
 });
@@ -119,6 +119,19 @@ app.get('/cart/:userId', function (req, res) {
     });
 });
 
-getProductById
+app.delete('/cart/:cartId/:idProd', function (req, res) {
+    const idProd = req.params.idProd;
+    const cartId = req.params.cartId;
+    deleteProductCarrinho(cartId, idProd)
+        .then(affectedRows => {
+            res.json({ message: `item deletado com sucesso` });
+        })
+        .catch(error => {
+            console.error('Erro ao deletar item:', error);
+            res.status(500).send('Erro ao deletar item do carrinho');
+        });
+});
+
+// getProductById
 
 module.exports = app;

@@ -82,8 +82,12 @@ VALUES
 INSERT INTO products (product_name, category, description, size, product_photo) 
 VALUES 
 ('Camisa Polo', 'Roupas', 'Camisa Polo de algodão', 'M', 'https://cdn.sistemawbuy.com.br/arquivos/8396f6cdc4ecfdde50f447ad12127860/produtos/642f0f023151b/fundo-cinza-642f0f02e3166.jpg'),
-('Tênis Esportivo', 'Calçados', 'Tênis para corrida', '42', 'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa/global/376591/07/sv01/fnd/BRA/w/1000/h/1000/fmt/png');
-
+('Tênis Esportivo', 'Calçados', 'Tênis para corrida', '42', 'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa/global/376591/07/sv01/fnd/BRA/w/1000/h/1000/fmt/png'),
+('Vestido Longo Floral', 'Roupas Evangélicas', 'Vestido longo floral com detalhes elegantes', 'M', 'https://firebasestorage.googleapis.com/v0/b/bazar-cattleya.appspot.com/o/dress001.jpg?alt=media&token=6724aa22-ae8e-49f6-b6b0-111049fb7971'),
+('Saia Midi Plissada', 'Roupas Evangélicas', 'Saia midi plissada com detalhes em renda', 'P',      'https://firebasestorage.googleapis.com/v0/b/bazar-cattleya.appspot.com/o/dress002.jpg?alt=media&token=4c41fa70-b082-4e53-b78a-4478ca0feeb2'),
+('Blusa Social Branca', 'Roupas Evangélicas', 'Blusa social branca com detalhes delicados', 'G',   'https://firebasestorage.googleapis.com/v0/b/bazar-cattleya.appspot.com/o/dress003.jpg?alt=media&token=c0c1699d-9122-4e4f-b04e-4f6dc403deb8'),
+('Calça Social Preta', 'Roupas Evangélicas', 'Calça social preta elegante e confortável', '42',    'https://firebasestorage.googleapis.com/v0/b/bazar-cattleya.appspot.com/o/dress004.jpg?alt=media&token=916223b5-8f6a-4bf6-b574-b46ae27127b4'),
+('Vestido Midi Estampado', 'Roupas Evangélicas', 'Vestido midi estampado com corte evasê', 'M',    'https://firebasestorage.googleapis.com/v0/b/bazar-cattleya.appspot.com/o/dress005.jpg?alt=media&token=356e5625-7818-40a7-a75d-251f7ea878e3');
 
 
 
@@ -92,7 +96,9 @@ VALUES
 INSERT INTO categories (category_name) 
 VALUES 
 ('Roupas'),
-('Calçados');
+('Calçados'),
+('Roupas Evangélicas');
+
 
 
 
@@ -102,7 +108,9 @@ VALUES
 INSERT INTO carts (user_id) 
 VALUES 
 (1),
-(2);
+(2),
+(3);
+
 
 
 
@@ -112,7 +120,9 @@ VALUES
 INSERT INTO cart_items (cart_id, product_id, quantity) 
 VALUES 
 (1, 1, 2),
-(2, 2, 1);
+(2, 2, 1),
+(1, 1, 2),
+(1, 3, 1);
 
 
 
@@ -122,8 +132,8 @@ VALUES
 INSERT INTO orders (user_id, order_date, status, total) 
 VALUES 
 (1, '2024-05-25 12:30:00', 'Pendente', 85.99),
-(2, '2024-05-25 13:45:00', 'Entregue', 120.50);
-
+(2, '2024-05-25 13:45:00', 'Entregue', 120.50),
+(1, NOW(), 'Concluído', 180.00);
 
 
 
@@ -133,7 +143,9 @@ INSERT INTO order_items (order_id, product_id, quantity, price)
 VALUES 
 (1, 1, 2, 39.99),
 (1, 2, 1, 45.00),
-(2, 2, 1, 120.50);
+(2, 2, 1, 120.50),
+(1, 1, 2, 120.00),
+(1, 3, 1, 60.00);
 
 
 

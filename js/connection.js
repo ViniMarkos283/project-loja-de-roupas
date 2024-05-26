@@ -49,11 +49,11 @@ function getUserById(id) {
   });
 }
 
-function getUserEmail(email,pass) {
+function getUserEmail(email, pass) {
   return new Promise((resolve, reject) => {
-    connection.query('SELECT * FROM users WHERE email = ? AND password = ?', [email], [pass],(error, results, fields) => {
+    connection.query('SELECT * FROM users WHERE email = ? AND password = ?', [email, pass], (error, results, fields) => {
       if (error) {
-        console.log(error);
+        console.error("Erro na consulta ao banco de dados: ", error);
         reject(error);
       } else {
         resolve(results);
@@ -61,6 +61,7 @@ function getUserEmail(email,pass) {
     });
   });
 }
+
 
 function addUser(user) {
   return new Promise((resolve, reject) => {
@@ -173,12 +174,12 @@ function getAllCarrinho(userId) {
   return new Promise((resolve, reject) => {
     connection.query(
       `
-      SELECT p.product_name, oi.quantity, p.product_photo, (oi.price * oi.quantity) AS total_price
-FROM order_items oi 
-JOIN products p ON oi.product_id = p.product_id
-JOIN orders o ON oi.order_id = o.order_id
-JOIN users u ON o.user_id = u.user_id
-WHERE u.user_id =  ?      
+      SELECT p.product_name, oi.quantity, p.product_photo, p.product_id,oi.order_id,(oi.price * oi.quantity) AS total_price
+      FROM order_items oi 
+      JOIN products p ON oi.product_id = p.product_id
+      JOIN orders o ON oi.order_id = o.order_id
+      JOIN users u ON o.user_id = u.user_id
+      WHERE u.user_id =  ?      
       `,
       [userId],
       (error, results, fields) => {
@@ -190,6 +191,37 @@ WHERE u.user_id =  ?
         }
       }
     );
+  });
+}
+
+function deleteProductCarrinho(cartId,idProd) {
+  return new Promise((resolve, reject) => {
+    connection.query(
+      `
+      DELETE FROM cart_items 
+      WHERE cart_id = ? AND product_id = ?`,
+      [cartId,idProd],
+      (error, results, fields) => {
+        if (error) {
+          console.log(error);
+          reject(error);
+        } else {
+          resolve(results.affectedRows);
+        }
+      });
+  });
+}
+
+function addProductCarrinho(cart_id, product_id, quantity) {
+  return new Promise((resolve, reject) => {
+    connection.query('INSERT INTO cart_items (cart_id, product_id, quantity) VALUES (?, ?, ?)', [cart_id, product_id, quantity], (error, results, fields) => {
+      if (error) {
+        console.log(error);
+        reject(error);
+      } else {
+        resolve(results.insertId);
+      }
+    });
   });
 }
 
@@ -206,5 +238,7 @@ module.exports = {
   getProductById,
   addProduct,
   updateProduct,
-  deleteProduct
+  deleteProduct,
+  deleteProductCarrinho,
+  addProductCarrinho
 };
