@@ -70,7 +70,7 @@
   justify-content: center;
   flex-direction: column;
   background-color: #222222;
-  background-image: url(../img/banner/Cattleya_trianae.jpg);
+  background-image: url(https://firebasestorage.googleapis.com/v0/b/bazar-cattleya.appspot.com/o/Cattleya_trianae.jpg?alt=media&token=eb647f2c-1c50-4923-aeca-6b017e0eb420);
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -94,4 +94,11 @@
   60% { color: #9370db; }  /* Roxo médio claro */
   80% { color: #ba55d3; }  /* Roxo claro */
   100% { color: #ff69b4; } /* Volta ao rosa claro */
+}
+
+/* mobile settings */
+@media screen and (max-width: 767px) {
+  .ads{
+    font-size: x-large;
+  }
 }

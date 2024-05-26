@@ -5,7 +5,7 @@ section{
     background-color: var(--cor-1);
 }
 
-div {
+div:not(.header, .head, .lateral) {
     display: flex;
 }
 
