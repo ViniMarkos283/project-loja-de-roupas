@@ -43,7 +43,7 @@ function cadastrar() {
         document.querySelector('#confSenha').value;
         document.querySelector('#senha').value;
 
-        window.location.href = "../html/login.html" 
+        window.location.href = "login.html" 
     }
     else {
 

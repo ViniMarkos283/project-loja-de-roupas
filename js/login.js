@@ -9,7 +9,7 @@ function login() {
     }
     if (bd_username == username && bd_senha == senha) {
         sessionStorage.username = username
-        window.location.href = "../html/index.html"
+        window.location.href = "index.html"
     }
     else {
         console.log(username)
