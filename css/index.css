@@ -100,36 +100,36 @@
 }
 
 @keyframes colorChange {
+
+  /* Rosa claro */
   0% {
     color: #ff69b4;
   }
 
-  /* Rosa claro */
+  /* Rosa profundo */
   20% {
     color: #ff1493;
   }
 
-  /* Rosa profundo */
+  /* Rosa escuro */
   40% {
     color: #c71585;
   }
 
-  /* Rosa escuro */
+  /* Roxo médio claro */
   60% {
     color: #9370db;
   }
 
-  /* Roxo médio claro */
+  /* Roxo claro */
   80% {
     color: #ba55d3;
   }
 
-  /* Roxo claro */
+  /* Volta ao rosa claro */
   100% {
     color: #ff69b4;
   }
-
-  /* Volta ao rosa claro */
 }
 
 /* mobile settings */
