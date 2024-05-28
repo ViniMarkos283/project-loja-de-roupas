@@ -1,0 +1,140 @@
+@import url('color_pallete.css');
+
+:root {
+  font-family: system-ui;
+  --accent-color: var(--cor-5);
+  --background-color: #ebebeb;
+  --foreground-color: #222222;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.outer-wrapper {
+  background-color: var(--cor-1);
+  color: var(--foreground-color);
+}
+
+.wrapper {
+  max-width: 60rem;
+  margin-inline: auto;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+  grid-auto-rows: 250px auto auto;
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+.product {
+  --card-padding: 0.75rem;
+  --border-radius: 10px;
+
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 3;
+  gap: var(--card-padding);
+
+  font-size: 1.1rem;
+  font-weight: 650;
+  overflow-wrap: break-word;
+  text-wrap: pretty;
+
+  border-radius: var(--border-radius);
+  padding: var(--card-padding);
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+
+  .title {
+    margin: 1rem;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: 1.5rem;
+  }
+
+  .image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    background-color: var(--cor-3);
+    border-radius: var(--border-radius);
+  }
+
+  >input {
+    display: block;
+    font-weight: inherit;
+    background-color: var(--accent-color);
+    color: white;
+    border-width: 0px;
+    border-radius: var(--border-radius);
+    padding: var(--card-padding);
+  }
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #222222;
+  background-image: url(https://firebasestorage.googleapis.com/v0/b/bazar-cattleya.appspot.com/o/Cattleya_trianae.jpg?alt=media&token=eb647f2c-1c50-4923-aeca-6b017e0eb420);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 40vh;
+}
+
+.ads {
+  color: white;
+}
+
+.ads span {
+  color: var(--cor-5);
+  font-weight: bolder;
+  animation: colorChange 5s infinite;
+}
+
+@keyframes colorChange {
+
+  /* Rosa claro */
+  0% {
+    color: #ff69b4;
+  }
+
+  /* Rosa profundo */
+  20% {
+    color: #ff1493;
+  }
+
+  /* Rosa escuro */
+  40% {
+    color: #c71585;
+  }
+
+  /* Roxo médio claro */
+  60% {
+    color: #9370db;
+  }
+
+  /* Roxo claro */
+  80% {
+    color: #ba55d3;
+  }
+
+  /* Volta ao rosa claro */
+  100% {
+    color: #ff69b4;
+  }
+}
+
+/* mobile settings */
+@media screen and (max-width: 767px) {
+  .ads {
+    font-size: x-large;
+  }
+}
