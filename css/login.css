@@ -1,14 +1,13 @@
 * {
- 
     padding: 0;
     margin: 0;
     font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
  
 body {
-    background-color: #C8B6C3;
+    background-color: #9470db6b;
     color: #C8B6C3;
- 
 }
  
 .spaceTop {
@@ -18,40 +17,29 @@ body {
 .spaceLogin {
     margin: 3%;
 }
- 
-.backh1 {
-    background-color: #c09ab7;
- 
-    color: #ffffff;
-    border-radius: 10px;
-    text-align: center;
-    margin-top: 30px;
-    background-image: url("https://img.freepik.com/premium-photo/cattleya-x-whitei-flower-closeup-jena_1048944-10336403.jpg");
-    /* background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F61%2F2f%2Fdc%2F612fdcfa6ed832db10a0336bc476b801.jpg&f=1&nofb=1&ipt=4cb93392eec5e6ab721839b92a5bd3c7c803ae85fe03e6b5f87a6c3c392925b7&ipo=images"); */
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 10px;
-    padding: 30px;
-    box-shadow: 5px 5px 5px black;
-}
+
  
 .backLogin {
-    background-image: url("https://img.freepik.com/premium-photo/cattleya-x-whitei-flower-closeup-jena_1048944-10336403.jpg");
-    /* background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F61%2F2f%2Fdc%2F612fdcfa6ed832db10a0336bc476b801.jpg&f=1&nofb=1&ipt=4cb93392eec5e6ab721839b92a5bd3c7c803ae85fe03e6b5f87a6c3c392925b7&ipo=images"); */
+    background-image: url("https://c4.wallpaperflare.com/wallpaper/355/629/66/flowers-stones-flower-orchid-wallpaper-preview.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 10px;
-    padding: 30px;
     box-shadow: 5px 5px 5px black;
+    width: 80%;
+    margin-top: 3vw;
 }
  
 .loginBack {
+    border-radius: 10px;
+    background-color: #bbaed6;
     width: 100%;
-    height: 300px;
+    height: 350px;
+    padding: 20px;
+    color: #ffffff;
 }
  
 .backInput {
-    background-color: #C8B6C3;
+    background-color: #c8b6c385;
 }
  
 .btLogin {
@@ -62,7 +50,6 @@ body {
 }
  
 .bt {
-    /* background-color: #7e6376; */
     background-color: #C8B6C3;
     border-color: #C8B6C3;
 }
@@ -82,4 +69,14 @@ body {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     /* color: #e2abd2; */
     color: #7e6376;
+}
+.conta{
+    color: #ffffff;
+    font-weight: bold;
+    a{
+        color: #ffffff;
+    }
+    a:hover{
+        color: #e7b0d7;
+    }
 }

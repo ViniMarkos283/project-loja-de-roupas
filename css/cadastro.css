@@ -1,64 +1,39 @@
 * {
- 
     padding: 0;
     margin: 0;
     font-weight: bold;
+    max-width: 100vw;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
  
 body {
-    background-color: #C8B6C3;
+    background-color: #9470db6c;
     color: #ffffff;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: large;
- 
-}
- 
-.spaceTop {
-    padding: 4%;
-}
- 
-.spacecadastro {
-    margin: 10px;
-}
- 
-.spaceForm {
-    padding: 20px;
-}
- 
-.backh1 {
-    background-color: #c09ab7;
-    box-shadow: 5px 5px 5px black;
-    color: #ffffff;
-    border-radius: 10px;
-    text-align: center;
-    margin-top: 30px;
-    background-image: url("https://images.pexels.com/photos/18671943/pexels-photo-18671943/free-photo-of-roxo-lilas-folhas-flor.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-    /* background-image: url("https://img.freepik.com/premium-photo/cattleya-x-whitei-flower-closeup-jena_1048944-10336403.jpg"); */
-    /* background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F61%2F2f%2Fdc%2F612fdcfa6ed832db10a0336bc476b801.jpg&f=1&nofb=1&ipt=4cb93392eec5e6ab721839b92a5bd3c7c803ae85fe03e6b5f87a6c3c392925b7&ipo=images"); */
-    background-repeat: no-repeat;
-    border-radius: 10px;
-    background-size: cover;
-    box-shadow: 5px 5px 5px black;
+    font-size: large; 
+    
 }
  
 .backcadastro {
-    background-image: url("https://images.pexels.com/photos/18671943/pexels-photo-18671943/free-photo-of-roxo-lilas-folhas-flor.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-    /* background-image: url("https://img.freepik.com/premium-photo/cattleya-x-whitei-flower-closeup-jena_1048944-10336403.jpg"); */
-    /* background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F61%2F2f%2Fdc%2F612fdcfa6ed832db10a0336bc476b801.jpg&f=1&nofb=1&ipt=4cb93392eec5e6ab721839b92a5bd3c7c803ae85fe03e6b5f87a6c3c392925b7&ipo=images"); */
+    background-image: url("https://c4.wallpaperflare.com/wallpaper/31/772/43/stones-orchid-pink-flowers-wallpaper-preview.jpg");
     background-repeat: no-repeat;
     border-radius: 10px;
+    width: 80vw;
+    margin: 10px;
+    margin-top: 3vw;
     background-size: cover;
     box-shadow: 5px 5px 5px black;
- 
+    padding: 30px;
 }
- 
-/* .cadastroBack {
-    width: 100%;
-    height: 300px;
-} */
- 
+.formCadastro{
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ad94e0;
+    opacity: 1;
+    max-width: 100%;
+}
+
 .backInput {
-    background-color: #C8B6C3;
+    background-color: #c8b6c396;
 }
  
 .btcadastro {
@@ -69,14 +44,13 @@ body {
 }
  
 .bt {
-    /* background-color: #7e6376; */
-    background-color: #C8B6C3;
+    background-color: #ad94e0;
     border-color: #C8B6C3;
     font-size: 20px;
 }
  
 .bt:hover {
-    background-color: #7e6376;
+    background-color: #8961d3;
     border-color: #C8B6C3;
 }
  
@@ -89,10 +63,16 @@ body {
 .nome {
     font-size: 50px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    /* color: #e2abd2; */
     color: #7e6376;
 }
  
-/* span{
-    color: #C8B6C3;
-} */
+.conta{
+    color: #ffffff;
+    font-weight: bold;
+    a{
+        color: #ffffff;
+    }
+    a:hover{
+        color: #e7b0d7;
+    }
+}
