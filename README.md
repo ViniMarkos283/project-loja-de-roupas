@@ -24,11 +24,10 @@ Front-End:
   - [adicionar a medida q for usar]
 
 Database:
-  - MySQL; (não implementado ainda)
-  - [adicionar a medida q for usar]
+  - MySQL;
 
 Back-End:
-  - [adicionar a medida q for usar]
+  - JavaScript
 
 # Integrantes do projeto: 
 - Luciana Guedes de Araújo;
@@ -37,7 +36,8 @@ Back-End:
 - Renato Winícius de Lima Jacob.
 
 # hospedagem: 
-- [ a definir ]
+- GitHub Pages
+- link de acesso: https://vinimarkos283.github.io/project-loja-de-roupas/
 
 # paleta de cores:
 - #F9F5F6
@@ -55,7 +55,6 @@ extras:
 - carrinho > guardará os itens escolhidos pelo user, permitindo serem comprados todos de uma vez, remover itens ou limpar o carrinho;
 - troca > página individual para visualizar e solicitar a troca de uma unica peça escolhida, igual no Mercado Livre, por exemplo;
 - criação de novo produto > além da obtenção, também haverá uma página para criar novos anuncios de roupas, sendo esta responsável por adicionar novos produtos no BD;
-- [vago para adição de novas págs, se necessário]
 
   # Casos de Uso
   https://drive.google.com/file/d/1Cati15HMN4HRRDuOetbtawwhNz8UExO2/view?usp=sharing (temporário)
