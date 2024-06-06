@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 <div class="col">
                         <p class='productsItem fistProd'>${item.product_name}</p>
                         <p class='productsItem'>Quantidade: ${item.quantity}</p>
-                        <p class='productsItem'>Preço: ${item.total_price}</p>
+                        <p class='productsItem'>valor simbolico: ${item.total_price}</p>
                         <button class="btn btn-outline-danger" onclick="removeItem(${item.order_id},${item.product_id})">Remover Item</button>
                         
                 </div>

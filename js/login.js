@@ -22,6 +22,7 @@ document.getElementById("myForm").addEventListener("submit", async function(even
         const user = await fetchUser(login, senha);
         if (user && user.length > 0) {
             alert("Login bem-sucedido");
+            localStorage.setItem("userPass" , user)
             document.location.replace("http://127.0.0.1:5500/html/index.html")
         } else {
             alert("Email ou senha incorretos");
