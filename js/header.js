@@ -1,12 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
     var headerDiv = document.querySelector("div.header");
     var footerDiv = document.querySelector("div.footer");
-    const user = sessionStorage.getItem("userPass")
-    
+    const users = sessionStorage.getItem("users")
+    var headerHTML = ""
 
     if (headerDiv) {
-        if (user == null) {
-            var headerHTML = `
+        if (users) {
+             headerHTML = `
             <header>
             <div class="head">
                 <a href="./index.html"><img
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
             `;
         }
         else{
-            var headerHTML = `
+             headerHTML = `
             <header>
             <div class="head">
                 <a href="./index.html"><img
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <input type="search" name="" id="" placeholder="Pesquisa">
                 <a href="./carrinho.html"><i class="bi bi-basket2-fill"></i></a>
                 <a href="./novoAnuncio.html"><i class="bi bi-plus-square-fill"></i></a>
-                <a href="./login.html"><i class="bi bi-person-circle"></i></a>
+                <a href="./perfil.html"><i class="bi bi-person-circle"></i></a>
                 <button class="menu" onclick="openMenu()"><i class="bi bi-list"></i></button>
             </div>
         </header>
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <a href="./carrinho.html"><i class="bi bi-basket2-fill"></i>Carrinho</a>
             <a href="./novoAnuncio.html"><i class="bi bi-plus-square-fill"></i>
                 Criar anuncio</a>
-            <a href="./perfil.html"><i class="bi bi-person-circle"></i>Perfil</a>
+            <a href="./login.html"><i class="bi bi-person-circle"></i>Fazer login</a>
         </div>
             `;
         }

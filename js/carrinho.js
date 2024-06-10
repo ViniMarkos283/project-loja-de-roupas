@@ -91,3 +91,20 @@ async function removeItem(cartId, idProd) {
         }
     }
 }
+document.getElementById('finalizar-compra').addEventListener('click', function() {
+    // Simulação do processo de finalização de compra
+    finalizarCompra();
+});
+
+function finalizarCompra() {
+    // Aqui você pode adicionar a lógica para processar a compra
+    // Por exemplo, enviar dados para o servidor via AJAX, etc.
+    // Para este exemplo, vamos apenas exibir uma mensagem de sucesso.
+
+    // Simula um atraso para o processamento da compra
+    setTimeout(function() {
+        alert('Compra finalizada com sucesso!');
+        // Redirecionar para uma página de confirmação ou resetar o carrinho
+        window.location.href = 'index.html'; // Opcional
+    }, 1000);
+}
