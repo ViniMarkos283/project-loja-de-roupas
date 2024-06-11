@@ -1,17 +1,17 @@
 document.addEventListener('DOMContentLoaded', async () => {
 
-    const user = {
-        full_name: 'João Silva',
-        birth_date: '1990-05-15',
-        email: 'joao@example.com',
-        address: 'Rua das Flores, 123',
-        city: 'São Paulo',
-        state: 'SP',
-        phone_home: '1122334455',
-        phone_mobile: '554499887766',
-        password: 'hashed_password'
-      };
-      sessionStorage.setItem("users", JSON.stringify(user))
+    // const user = {
+    //     full_name: 'João Silva',
+    //     birth_date: '1990-05-15',
+    //     email: 'joao@example.com',
+    //     address: 'Rua das Flores, 123',
+    //     city: 'São Paulo',
+    //     state: 'SP',
+    //     phone_home: '1122334455',
+    //     phone_mobile: '554499887766',
+    //     password: 'hashed_password'
+    //   };
+    //   sessionStorage.setItem("users", JSON.stringify(user))
     //   const users = JSON.stringify(users);
       const users = JSON.parse(sessionStorage.getItem("users"))
       console.log(users);
@@ -25,21 +25,21 @@ document.addEventListener('DOMContentLoaded', async () => {
     const profileElement = document.querySelector(".infos");
 
     if (users) { // Verifica se há usuários no array
-        //const user = users[0]; // Obtém o primeiro usuário do array
+        const user = users[0]; // Obtém o primeiro usuário do array
         profileElement.innerHTML = `
         <div class="col-md-6">
-        <p><strong>Nome:</strong> ${users.full_name}</p>
-        <p><strong>Data de nascimento:</strong> ${users.birth_date}</p>
-        <p><strong>Email:</strong> ${users.email}</p>
+        <p><strong>Nome:</strong> ${user.full_name}</p>
+        <p><strong>Data de nascimento:</strong> ${user.birth_date}</p>
+        <p><strong>Email:</strong> ${user.email}</p>
     </div>
     <div class="col-md-6">
-        <p><strong>Estado:</strong> ${users.state}</p>
-        <p><strong>Telefone fixo:</strong> ${users.phone_home}</p>
-        <p><strong>Telefone celular:</strong> ${users.phone_mobile}</p>
+        <p><strong>Estado:</strong> ${user.state}</p>
+        <p><strong>Telefone fixo:</strong> ${user.phone_home}</p>
+        <p><strong>Telefone celular:</strong> ${user.phone_mobile}</p>
     </div>
     <div class="col-md-6">
-    <p><strong>Endereço:</strong> ${users.address}</p>
-        <p><strong>Cidade:</strong> ${users.city}</p>
+    <p><strong>Endereço:</strong> ${user.address}</p>
+        <p><strong>Cidade:</strong> ${user.city}</p>
         </div>
 
         `;

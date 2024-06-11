@@ -88,12 +88,13 @@ VALUES
 ('Calçados'),
 ('Roupas Evangélicas');
 
+select * from category;
 -- Inserção de dados na tabela de produtos
 INSERT INTO products (product_name, category_id, description, size, product_photo, stock, price) 
 VALUES 
 ('Vestido Longo', 1, 'Vestido longo para eventos religiosos', 'M', 'https://firebasestorage.googleapis.com/v0/b/bazar-cattleya.appspot.com/o/dress001.jpg?alt=media&token=6724aa22-ae8e-49f6-b6b0-111049fb7971', 80, 20.00),
 ('Vestido Simples', 2, 'Vestido simples e elegante para cultos', 'P', 'https://firebasestorage.googleapis.com/v0/b/bazar-cattleya.appspot.com/o/dress002.jpg?alt=media&token=4c41fa70-b082-4e53-b78a-4478ca0feeb2', 60, 15.00),
-('Vestido Social Branco', 4, 'Vestido social branco para ocasiões religiosas', 'G', 'https://firebasestorage.googleapis.com/v0/b/bazar-cattleya.appspot.com/o/dress003.jpg?alt=media&token=c0c1699d-9122-4e4f-b04e-4f6dc403deb8', 40, 25.00),
+('Vestido Social Branco', 3, 'Vestido social branco para ocasiões religiosas', 'G', 'https://firebasestorage.googleapis.com/v0/b/bazar-cattleya.appspot.com/o/dress003.jpg?alt=media&token=c0c1699d-9122-4e4f-b04e-4f6dc403deb8', 40, 25.00),
 ('Vestido Preto Elegante', 3, 'Vestido preto elegante para eventos religiosos', '42', 'https://firebasestorage.googleapis.com/v0/b/bazar-cattleya.appspot.com/o/dress004.jpg?alt=media&token=916223b5-8f6a-4bf6-b574-b46ae27127b4', 30, 30.00),
 ('Vestido Midi Floral', 1, 'Vestido midi floral com corte evasê', 'M', 'https://firebasestorage.googleapis.com/v0/b/bazar-cattleya.appspot.com/o/dress005.jpg?alt=media&token=356e5625-7818-40a7-a75d-251f7ea878e3', 50, 20.00);
 

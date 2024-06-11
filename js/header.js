@@ -5,50 +5,50 @@ document.addEventListener("DOMContentLoaded", function () {
     var headerHTML = ""
 
     if (headerDiv) {
-        if (users) {
+        if (users!== null) {
              headerHTML = `
-            <header>
-            <div class="head">
-                <a href="./index.html"><img
-                        src="https://firebasestorage.googleapis.com/v0/b/bazar-cattleya.appspot.com/o/loja-roupa.png?alt=media&token=d2209285-9154-4afa-9941-6c42fb986ef8"
-                        alt="voltar a pag principal" class="icon"></a>
-                <input type="search" name="" id="" placeholder="Pesquisa">
-                <a href="./carrinho.html"><i class="bi bi-basket2-fill"></i></a>
-                <a href="./novoAnuncio.html"><i class="bi bi-plus-square-fill"></i></a>
-                <a href="./login.html"><i class="bi bi-person-circle"></i></a>
-                <button class="menu" onclick="openMenu()"><i class="bi bi-list"></i></button>
-            </div>
-        </header>
-        
-        <div class="lateral ">
-            <a href="./carrinho.html"><i class="bi bi-basket2-fill"></i>Carrinho</a>
-            <a href="./novoAnuncio.html"><i class="bi bi-plus-square-fill"></i>
-                Criar anuncio</a>
-            <a href="./login.html"><i class="bi bi-person-circle"></i>Fazer login</a>
+        <header>
+        <div class="head">
+            <a href="./index.html"><img
+                    src="https://firebasestorage.googleapis.com/v0/b/bazar-cattleya.appspot.com/o/loja-roupa.png?alt=media&token=d2209285-9154-4afa-9941-6c42fb986ef8"
+                    alt="voltar a pag principal" class="icon"></a>
+            <input type="search" name="" id="" placeholder="Pesquisa">
+            <a href="./carrinho.html"><i class="bi bi-basket2-fill"></i></a>
+            <a href="./novoAnuncio.html"><i class="bi bi-plus-square-fill"></i></a>
+            <a href="./perfil.html"><i class="bi bi-person-circle"></i></a>
+            <button class="menu" onclick="openMenu()"><i class="bi bi-list"></i></button>
         </div>
+    </header>
+    
+    <div class="lateral ">
+        <a href="./carrinho.html"><i class="bi bi-basket2-fill"></i>Carrinho</a>
+        <a href="./novoAnuncio.html"><i class="bi bi-plus-square-fill"></i>
+            Criar anuncio</a>
+        <a href="./login.html"><i class="bi bi-person-circle"></i>Fazer login</a>
+    </div>
             `;
         }
         else{
              headerHTML = `
-            <header>
-            <div class="head">
-                <a href="./index.html"><img
-                        src="https://firebasestorage.googleapis.com/v0/b/bazar-cattleya.appspot.com/o/loja-roupa.png?alt=media&token=d2209285-9154-4afa-9941-6c42fb986ef8"
-                        alt="voltar a pag principal" class="icon"></a>
-                <input type="search" name="" id="" placeholder="Pesquisa">
-                <a href="./carrinho.html"><i class="bi bi-basket2-fill"></i></a>
-                <a href="./novoAnuncio.html"><i class="bi bi-plus-square-fill"></i></a>
-                <a href="./perfil.html"><i class="bi bi-person-circle"></i></a>
-                <button class="menu" onclick="openMenu()"><i class="bi bi-list"></i></button>
-            </div>
-        </header>
-        
-        <div class="lateral ">
-            <a href="./carrinho.html"><i class="bi bi-basket2-fill"></i>Carrinho</a>
-            <a href="./novoAnuncio.html"><i class="bi bi-plus-square-fill"></i>
-                Criar anuncio</a>
-            <a href="./login.html"><i class="bi bi-person-circle"></i>Fazer login</a>
-        </div>
+             <header>
+             <div class="head">
+                 <a href="./index.html"><img
+                         src="https://firebasestorage.googleapis.com/v0/b/bazar-cattleya.appspot.com/o/loja-roupa.png?alt=media&token=d2209285-9154-4afa-9941-6c42fb986ef8"
+                         alt="voltar a pag principal" class="icon"></a>
+                 <input type="search" name="" id="" placeholder="Pesquisa">
+                 <a href="./carrinho.html"><i class="bi bi-basket2-fill"></i></a>
+                 <a href="./novoAnuncio.html"><i class="bi bi-plus-square-fill"></i></a>
+                 <a href="./login.html"><i class="bi bi-person-circle"></i></a>
+                 <button class="menu" onclick="openMenu()"><i class="bi bi-list"></i></button>
+             </div>
+         </header>
+         
+         <div class="lateral ">
+             <a href="./carrinho.html"><i class="bi bi-basket2-fill"></i>Carrinho</a>
+             <a href="./novoAnuncio.html"><i class="bi bi-plus-square-fill"></i>
+                 Criar anuncio</a>
+             <a href="./login.html"><i class="bi bi-person-circle"></i>Fazer login</a>
+         </div>
             `;
         }
 
