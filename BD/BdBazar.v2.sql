@@ -88,7 +88,6 @@ VALUES
 ('Calçados'),
 ('Roupas Evangélicas');
 
-select * from category;
 -- Inserção de dados na tabela de produtos
 INSERT INTO products (product_name, category_id, description, size, product_photo, stock, price) 
 VALUES 
