@@ -91,11 +91,11 @@ VALUES
 -- Inserção de dados na tabela de produtos
 INSERT INTO products (product_name, category_id, description, size, product_photo, stock, price) 
 VALUES 
-('Vestido Longo', 1, 'Vestido longo para eventos religiosos', 'M', 'https://firebasestorage.googleapis.com/v0/b/bazar-cattleya.appspot.com/o/dress001.jpg?alt=media&token=6724aa22-ae8e-49f6-b6b0-111049fb7971', 80, 20.00),
-('Vestido Simples', 2, 'Vestido simples e elegante para cultos', 'P', 'https://firebasestorage.googleapis.com/v0/b/bazar-cattleya.appspot.com/o/dress002.jpg?alt=media&token=4c41fa70-b082-4e53-b78a-4478ca0feeb2', 60, 15.00),
-('Vestido Social Branco', 3, 'Vestido social branco para ocasiões religiosas', 'G', 'https://firebasestorage.googleapis.com/v0/b/bazar-cattleya.appspot.com/o/dress003.jpg?alt=media&token=c0c1699d-9122-4e4f-b04e-4f6dc403deb8', 40, 25.00),
-('Vestido Preto Elegante', 3, 'Vestido preto elegante para eventos religiosos', '42', 'https://firebasestorage.googleapis.com/v0/b/bazar-cattleya.appspot.com/o/dress004.jpg?alt=media&token=916223b5-8f6a-4bf6-b574-b46ae27127b4', 30, 30.00),
-('Vestido Midi Floral', 1, 'Vestido midi floral com corte evasê', 'M', 'https://firebasestorage.googleapis.com/v0/b/bazar-cattleya.appspot.com/o/dress005.jpg?alt=media&token=356e5625-7818-40a7-a75d-251f7ea878e3', 50, 20.00);
+('Vestido Longo', 1, 'Vestido longo para eventos religiosos', 'M', 'https://firebasestorage.googleapis.com/v0/b/bazar-cattleya.appspot.com/o/dress001.jpg?alt=media&token=6724aa22-ae8e-49f6-b6b0-111049fb7971', 80, 5.00),
+('Vestido Simples', 2, 'Vestido simples e elegante para cultos', 'P', 'https://firebasestorage.googleapis.com/v0/b/bazar-cattleya.appspot.com/o/dress002.jpg?alt=media&token=4c41fa70-b082-4e53-b78a-4478ca0feeb2', 60, 5.00),
+('Vestido Social Branco', 3, 'Vestido social branco para ocasiões religiosas', 'G', 'https://firebasestorage.googleapis.com/v0/b/bazar-cattleya.appspot.com/o/dress003.jpg?alt=media&token=c0c1699d-9122-4e4f-b04e-4f6dc403deb8', 40, 6.00),
+('Vestido Preto Elegante', 3, 'Vestido preto elegante para eventos religiosos', '42', 'https://firebasestorage.googleapis.com/v0/b/bazar-cattleya.appspot.com/o/dress004.jpg?alt=media&token=916223b5-8f6a-4bf6-b574-b46ae27127b4', 30, 7.00),
+('Vestido Midi Floral', 1, 'Vestido midi floral com corte evasê', 'M', 'https://firebasestorage.googleapis.com/v0/b/bazar-cattleya.appspot.com/o/dress005.jpg?alt=media&token=356e5625-7818-40a7-a75d-251f7ea878e3', 50, 8.00);
 
 -- Inserção de dados na tabela de produtos (continuação)
 -- ('Camisa Polo', 1, 'Camisa Polo de algodão', 'M', 'https://cdn.sistemawbuy.com.br/arquivos/8396f6cdc4ecfdde50f447ad12127860/produtos/642f0f023151b/fundo-cinza-642f0f02e3166.jpg', 100, 49.99),
@@ -124,18 +124,18 @@ VALUES
 -- Inserindo dados na tabela de pedidos
 INSERT INTO orders (user_id, order_date, status, total) 
 VALUES 
-(1, '2024-05-25 12:30:00', 'Pendente', 85.99),
-(1, '2024-05-25 12:30:00', 'Pendente', 85.99),
-(2, '2024-05-25 13:45:00', 'cancelado', 120.50),
-(1, '2024-05-25 10:30:00', 'Em Processamento', 250.99),
-(2, '2024-05-25 20:45:00', 'cancelado', 500.50);
+(1, '2024-05-25 12:30:00', 'Pendente', 10.99),
+(1, '2024-05-25 12:30:00', 'Pendente', 15.99),
+(2, '2024-05-25 13:45:00', 'cancelado', 20.50),
+(1, '2024-05-25 10:30:00', 'Em Processamento', 10.99),
+(2, '2024-05-25 20:45:00', 'cancelado', 13.50);
 
 -- Inserindo dados na tabela de itens do pedido
 INSERT INTO order_items (order_id, product_id, quantity, price) 
 VALUES 
-(1, 1, 2, 39.99),
-(2, 2, 1, 45.00),
-(3, 3, 1, 60.00); -- Corrigido para um order_id existente na tabela orders
+(1, 1, 2, 20.99),
+(2, 2, 1, 5.00),
+(3, 3, 1, 12.00); -- Corrigido para um order_id existente na tabela orders
 
 
 

@@ -30,7 +30,7 @@ async function fetchDeleteItem(cartId, idProd) {
 
 // Função para renderizar os itens do carrinho na página
 document.addEventListener('DOMContentLoaded', async () => {
-    const userId = 2; // Substitua pelo ID do usuário atual, se necessário
+    const userId = 1; // Substitua pelo ID do usuário atual, se necessário
     const carrinhoElement = document.getElementById('carrinho');
     const totalAmountElement = document.getElementById('totalAmount');
 
@@ -44,6 +44,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         cartItems.forEach(item => {
             const productElement = document.createElement('div');
             productElement.classList.add('product');
+            console.log(item.quantity);
+            console.log(item);
 
             productElement.innerHTML = `
             <div class="row">
